@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login form</title>
+
+	</head>
+	<body>
+		<center>
+			<h3>Login or register</h3>
+			<input type="text" id="usr_name"><br /><br />
+			<input type="password" id="passwd"><br /><br />
+			<button onclick="gt();" id="reg_butt">Register</button><br /><br />
+			<button onclick="tg();" id="log_butt">Login</button>
+			<script>
+			
+				function gt() {
+					localStorage.clear()
+					var log_butt = document.getElementById("reg_butt");
+					var usr_name = document.getElementById("usr_name");
+					var passwd = document.getElementById("passwd");
+					var usr_name = localStorage.setItem(usr_name.value, passwd.value); //Create account
+
+				}
+				function tg() {
+					var usr_name = document.getElementById("usr_name");
+					var passwd = document.getElementById("passwd");
+					if(localStorage.getItem(usr_name.value) == passwd.value) {
+
+						alert("Succesfully login");
+						window.location.href = "home.html"
+				
+					}else {
+			
+						alert("Wrong username or password");
+				
+					}
+			
+				}
+			</script>
+			<h6>Sorry my server is too small for saving user accounts the next time you must login from this device</h6>
+		</center>
+	</body>
+</html>
