@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Deep Dive
+Comment=GenericName=
+Exec=com.github.deep-dive %U
+Icon=com.github.deep-dive
+Terminal=false
+Categories=Utility;GTK;Development;
+Keywords=Develop

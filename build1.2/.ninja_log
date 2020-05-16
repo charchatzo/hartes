@@ -1,0 +1,6 @@
+# ninja log v5
+0	235	1589520044	com.github.deep-dive.desktop	beea9aa614940e11
+0	238	1589520044	com.github.deep-dive.appdata.xml	cbdeed721f9af283
+0	346	1589520044	com.github.deep-dive@exe/src/Application.c	e9b8b2b957a6cfdb
+346	884	1589520044	com.github.deep-dive@exe/meson-generated_src_Application.c.o	3476ed081a26e504
+902	1196	1589520045	com.github.deep-dive	66db748dca585757
