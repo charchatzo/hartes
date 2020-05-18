@@ -1,27 +1,27 @@
-Build started at 2020-05-15T08:20:34.979383
+Build started at 2020-05-18T12:11:08.624252
 Main binary: /usr/bin/python3
 Python system: Linux
 The Meson build system
 Version: 0.49.2
-Source dir: /media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive
-Build dir: /media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/build1.2
+Source dir: /home/charalabos/hartes
+Build dir: /home/charalabos/hartes/build1.2
 Build type: native build
 Project name: com.github.deep-dive
 Project version: 1.2.0
 Sanity testing C compiler: cc
 Is cross compiler: False.
-Sanity check compiler command line: cc /media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/build1.2/meson-private/sanitycheckc.c -o /media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/build1.2/meson-private/sanitycheckc.exe
+Sanity check compiler command line: cc /home/charalabos/hartes/build1.2/meson-private/sanitycheckc.c -o /home/charalabos/hartes/build1.2/meson-private/sanitycheckc.exe
 Sanity check compile stdout:
 
 -----
 Sanity check compile stderr:
 
 -----
-Running test binary command: /media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/build1.2/meson-private/sanitycheckc.exe
+Running test binary command: /home/charalabos/hartes/build1.2/meson-private/sanitycheckc.exe
 Native C compiler: cc (gcc 7.5.0 "cc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0")
 Running compile:
-Working directory:  /tmp/tmpt6ybuxlr
-Command line:  valac /tmp/tmpt6ybuxlr/testfile.vala -C 
+Working directory:  /tmp/tmpfm73w076
+Command line:  valac /tmp/tmpfm73w076/testfile.vala -C 
 
 Code:
  class MesonSanityCheck : Object { }
@@ -48,8 +48,8 @@ Called `/usr/bin/pkg-config gio-unix-2.0 --libs` -> 0
 Called `/usr/bin/pkg-config gio-unix-2.0 --libs` -> 0
 -lgio-2.0 -lgobject-2.0 -lglib-2.0
 Running compile:
-Working directory:  /tmp/tmp964bguqv
-Command line:  cc /tmp/tmp964bguqv/testfile.c -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmp964bguqv/output.exe -O0 
+Working directory:  /tmp/tmps4xtd8ec
+Command line:  cc /tmp/tmps4xtd8ec/testfile.c -pipe -D_FILE_OFFSET_BITS=64 -o /tmp/tmps4xtd8ec/output.exe -O0 
 
 Code:
  #include<stdio.h>
@@ -70,8 +70,8 @@ Program stderr:
 
 
 Running compile:
-Working directory:  /tmp/tmpof20ttun
-Command line:  cc /tmp/tmpof20ttun/testfile.c -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmpof20ttun/output.obj -O0 --print-search-dirs 
+Working directory:  /tmp/tmp12p713uo
+Command line:  cc /tmp/tmp12p713uo/testfile.c -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp12p713uo/output.obj -O0 --print-search-dirs 
 
 Code:
  

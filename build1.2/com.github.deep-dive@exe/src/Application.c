@@ -138,9 +138,9 @@ welcomeview*
 welcomeview_construct (GType object_type)
 {
 	welcomeview * self = NULL;
-#line 26 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 26 "/home/charalabos/hartes/src/Application.vala"
 	self = (welcomeview*) g_object_new (object_type, NULL);
-#line 26 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 26 "/home/charalabos/hartes/src/Application.vala"
 	return self;
 #line 146 "Application.c"
 }
@@ -149,7 +149,7 @@ welcomeview_construct (GType object_type)
 welcomeview*
 welcomeview_new (void)
 {
-#line 26 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 26 "/home/charalabos/hartes/src/Application.vala"
 	return welcomeview_construct (TYPE_WELCOMEVIEW);
 #line 155 "Application.c"
 }
@@ -160,16 +160,16 @@ _welcomeview___lambda4_ (welcomeview* self,
                          gint index)
 {
 	GError* _inner_error0_ = NULL;
-#line 33 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 33 "/home/charalabos/hartes/src/Application.vala"
 	switch (index) {
-#line 33 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 33 "/home/charalabos/hartes/src/Application.vala"
 		case 0:
 #line 168 "Application.c"
 		{
 			{
-#line 36 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 36 "/home/charalabos/hartes/src/Application.vala"
 				g_app_info_launch_default_for_uri ("https://valadoc.org/granite/Granite.html", NULL, &_inner_error0_);
-#line 36 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 36 "/home/charalabos/hartes/src/Application.vala"
 				if (G_UNLIKELY (_inner_error0_ != NULL)) {
 #line 175 "Application.c"
 					goto __catch0_g_error;
@@ -181,43 +181,43 @@ _welcomeview___lambda4_ (welcomeview* self,
 				GError* e = NULL;
 				GError* _tmp0_;
 				const gchar* _tmp1_;
-#line 35 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 35 "/home/charalabos/hartes/src/Application.vala"
 				e = _inner_error0_;
-#line 35 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 35 "/home/charalabos/hartes/src/Application.vala"
 				_inner_error0_ = NULL;
-#line 38 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 38 "/home/charalabos/hartes/src/Application.vala"
 				_tmp0_ = e;
-#line 38 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 38 "/home/charalabos/hartes/src/Application.vala"
 				_tmp1_ = _tmp0_->message;
-#line 38 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 38 "/home/charalabos/hartes/src/Application.vala"
 				g_warning ("Application.vala:38: %s", _tmp1_);
-#line 35 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 35 "/home/charalabos/hartes/src/Application.vala"
 				_g_error_free0 (e);
 #line 197 "Application.c"
 			}
 			__finally0:
-#line 35 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 35 "/home/charalabos/hartes/src/Application.vala"
 			if (G_UNLIKELY (_inner_error0_ != NULL)) {
-#line 35 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 35 "/home/charalabos/hartes/src/Application.vala"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error0_->message, g_quark_to_string (_inner_error0_->domain), _inner_error0_->code);
-#line 35 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 35 "/home/charalabos/hartes/src/Application.vala"
 				g_clear_error (&_inner_error0_);
-#line 35 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 35 "/home/charalabos/hartes/src/Application.vala"
 				return;
 #line 208 "Application.c"
 			}
-#line 41 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 41 "/home/charalabos/hartes/src/Application.vala"
 			break;
 #line 212 "Application.c"
 		}
-#line 33 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 33 "/home/charalabos/hartes/src/Application.vala"
 		case 1:
 #line 216 "Application.c"
 		{
 			{
-#line 44 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 44 "/home/charalabos/hartes/src/Application.vala"
 				g_app_info_launch_default_for_uri ("https://github.com/elementary/granite", NULL, &_inner_error0_);
-#line 44 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 44 "/home/charalabos/hartes/src/Application.vala"
 				if (G_UNLIKELY (_inner_error0_ != NULL)) {
 #line 223 "Application.c"
 					goto __catch1_g_error;
@@ -229,37 +229,37 @@ _welcomeview___lambda4_ (welcomeview* self,
 				GError* e = NULL;
 				GError* _tmp2_;
 				const gchar* _tmp3_;
-#line 43 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 43 "/home/charalabos/hartes/src/Application.vala"
 				e = _inner_error0_;
-#line 43 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 43 "/home/charalabos/hartes/src/Application.vala"
 				_inner_error0_ = NULL;
-#line 46 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 46 "/home/charalabos/hartes/src/Application.vala"
 				_tmp2_ = e;
-#line 46 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 46 "/home/charalabos/hartes/src/Application.vala"
 				_tmp3_ = _tmp2_->message;
-#line 46 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 46 "/home/charalabos/hartes/src/Application.vala"
 				g_warning ("Application.vala:46: %s", _tmp3_);
-#line 43 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 43 "/home/charalabos/hartes/src/Application.vala"
 				_g_error_free0 (e);
 #line 245 "Application.c"
 			}
 			__finally1:
-#line 43 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 43 "/home/charalabos/hartes/src/Application.vala"
 			if (G_UNLIKELY (_inner_error0_ != NULL)) {
-#line 43 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 43 "/home/charalabos/hartes/src/Application.vala"
 				g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error0_->message, g_quark_to_string (_inner_error0_->domain), _inner_error0_->code);
-#line 43 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 43 "/home/charalabos/hartes/src/Application.vala"
 				g_clear_error (&_inner_error0_);
-#line 43 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 43 "/home/charalabos/hartes/src/Application.vala"
 				return;
 #line 256 "Application.c"
 			}
-#line 49 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 49 "/home/charalabos/hartes/src/Application.vala"
 			break;
 #line 260 "Application.c"
 		}
 		default:
-#line 33 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 33 "/home/charalabos/hartes/src/Application.vala"
 		break;
 #line 265 "Application.c"
 	}
@@ -271,7 +271,7 @@ __welcomeview___lambda4__granite_widgets_welcome_activated (GraniteWidgetsWelcom
                                                             gint index,
                                                             gpointer self)
 {
-#line 32 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 32 "/home/charalabos/hartes/src/Application.vala"
 	_welcomeview___lambda4_ ((welcomeview*) self, index);
 #line 277 "Application.c"
 }
@@ -289,29 +289,29 @@ welcomeview_constructor (GType type,
 	GraniteWidgetsWelcome* _tmp0_;
 	GraniteWidgetsWelcome* _tmp1_;
 	GraniteWidgetsWelcome* _tmp2_;
-#line 27 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 27 "/home/charalabos/hartes/src/Application.vala"
 	parent_class = G_OBJECT_CLASS (welcomeview_parent_class);
-#line 27 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 27 "/home/charalabos/hartes/src/Application.vala"
 	obj = parent_class->constructor (type, n_construct_properties, construct_properties);
-#line 27 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 27 "/home/charalabos/hartes/src/Application.vala"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_WELCOMEVIEW, welcomeview);
-#line 28 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 28 "/home/charalabos/hartes/src/Application.vala"
 	_tmp0_ = granite_widgets_welcome_new ("Deep dive", "This is a simple web browser.");
-#line 28 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 28 "/home/charalabos/hartes/src/Application.vala"
 	g_object_ref_sink (_tmp0_);
-#line 28 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 28 "/home/charalabos/hartes/src/Application.vala"
 	welcome = _tmp0_;
-#line 30 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 30 "/home/charalabos/hartes/src/Application.vala"
 	_tmp1_ = welcome;
-#line 30 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 30 "/home/charalabos/hartes/src/Application.vala"
 	gtk_container_add ((GtkContainer*) self, (GtkWidget*) _tmp1_);
-#line 32 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 32 "/home/charalabos/hartes/src/Application.vala"
 	_tmp2_ = welcome;
-#line 32 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 32 "/home/charalabos/hartes/src/Application.vala"
 	g_signal_connect_object (_tmp2_, "activated", (GCallback) __welcomeview___lambda4__granite_widgets_welcome_activated, self, 0);
-#line 27 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 27 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (welcome);
-#line 27 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 27 "/home/charalabos/hartes/src/Application.vala"
 	return obj;
 #line 317 "Application.c"
 }
@@ -320,9 +320,9 @@ welcomeview_constructor (GType type,
 static void
 welcomeview_class_init (welcomeviewClass * klass)
 {
-#line 26 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 26 "/home/charalabos/hartes/src/Application.vala"
 	welcomeview_parent_class = g_type_class_peek_parent (klass);
-#line 26 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 26 "/home/charalabos/hartes/src/Application.vala"
 	G_OBJECT_CLASS (klass)->constructor = welcomeview_constructor;
 #line 328 "Application.c"
 }
@@ -352,9 +352,9 @@ TestApplication*
 test_application_construct (GType object_type)
 {
 	TestApplication * self = NULL;
-#line 60 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 60 "/home/charalabos/hartes/src/Application.vala"
 	self = (TestApplication*) g_object_new (object_type, "application-id", "com.github.Test", "flags", G_APPLICATION_FLAGS_NONE, NULL);
-#line 59 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 59 "/home/charalabos/hartes/src/Application.vala"
 	return self;
 #line 360 "Application.c"
 }
@@ -363,7 +363,7 @@ test_application_construct (GType object_type)
 TestApplication*
 test_application_new (void)
 {
-#line 59 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 59 "/home/charalabos/hartes/src/Application.vala"
 	return test_application_construct (TEST_TYPE_APPLICATION);
 #line 369 "Application.c"
 }
@@ -372,9 +372,9 @@ test_application_new (void)
 static Block1Data*
 block1_data_ref (Block1Data* _data1_)
 {
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	g_atomic_int_inc (&_data1_->_ref_count_);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	return _data1_;
 #line 380 "Application.c"
 }
@@ -385,22 +385,31 @@ block1_data_unref (void * _userdata_)
 {
 	Block1Data* _data1_;
 	_data1_ = (Block1Data*) _userdata_;
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	if (g_atomic_int_dec_and_test (&_data1_->_ref_count_)) {
 #line 391 "Application.c"
 		TestApplication* self;
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 		self = _data1_->self;
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 		_g_object_unref0 (_data1_->browser);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 		_g_object_unref0 (_data1_->searchbar);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 		_g_object_unref0 (self);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 		g_slice_free (Block1Data, _data1_);
 #line 403 "Application.c"
 	}
+}
+
+
+static gpointer
+_g_object_ref0 (gpointer self)
+{
+#line 78 "/home/charalabos/hartes/src/Application.vala"
+	return self ? g_object_ref (self) : NULL;
+#line 413 "Application.c"
 }
 
 
@@ -408,11 +417,11 @@ static void
 __lambda5_ (Block1Data* _data1_)
 {
 	TestApplication* self;
-#line 89 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 96 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 90 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 97 "/home/charalabos/hartes/src/Application.vala"
 	webkit_web_view_reload (_data1_->browser);
-#line 416 "Application.c"
+#line 425 "Application.c"
 }
 
 
@@ -420,9 +429,9 @@ static void
 ___lambda5__gtk_button_clicked (GtkButton* _sender,
                                 gpointer self)
 {
-#line 89 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 96 "/home/charalabos/hartes/src/Application.vala"
 	__lambda5_ (self);
-#line 426 "Application.c"
+#line 435 "Application.c"
 }
 
 
@@ -432,15 +441,15 @@ __lambda6_ (Block1Data* _data1_)
 	TestApplication* self;
 	const gchar* _tmp0_;
 	const gchar* _tmp1_;
-#line 96 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 103 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 97 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 104 "/home/charalabos/hartes/src/Application.vala"
 	_tmp0_ = webkit_web_view_get_uri (_data1_->browser);
-#line 97 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 104 "/home/charalabos/hartes/src/Application.vala"
 	_tmp1_ = _tmp0_;
-#line 97 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 104 "/home/charalabos/hartes/src/Application.vala"
 	gtk_entry_set_text (_data1_->searchbar, _tmp1_);
-#line 444 "Application.c"
+#line 453 "Application.c"
 }
 
 
@@ -449,9 +458,9 @@ ___lambda6__webkit_web_view_load_changed (WebKitWebView* _sender,
                                           WebKitLoadEvent load_event,
                                           gpointer self)
 {
-#line 96 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 103 "/home/charalabos/hartes/src/Application.vala"
 	__lambda6_ (self);
-#line 455 "Application.c"
+#line 464 "Application.c"
 }
 
 
@@ -461,15 +470,15 @@ __lambda7_ (Block1Data* _data1_)
 	TestApplication* self;
 	const gchar* _tmp0_;
 	const gchar* _tmp1_;
-#line 100 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 107 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 101 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 108 "/home/charalabos/hartes/src/Application.vala"
 	_tmp0_ = gtk_entry_get_text (_data1_->searchbar);
-#line 101 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 108 "/home/charalabos/hartes/src/Application.vala"
 	_tmp1_ = _tmp0_;
-#line 101 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 108 "/home/charalabos/hartes/src/Application.vala"
 	webkit_web_view_load_uri (_data1_->browser, _tmp1_);
-#line 473 "Application.c"
+#line 482 "Application.c"
 }
 
 
@@ -477,9 +486,9 @@ static void
 ___lambda7__gtk_entry_activate (GtkEntry* _sender,
                                 gpointer self)
 {
-#line 100 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 107 "/home/charalabos/hartes/src/Application.vala"
 	__lambda7_ (self);
-#line 483 "Application.c"
+#line 492 "Application.c"
 }
 
 
@@ -487,11 +496,11 @@ static void
 __lambda8_ (Block1Data* _data1_)
 {
 	TestApplication* self;
-#line 104 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 111 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 105 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 112 "/home/charalabos/hartes/src/Application.vala"
 	webkit_web_view_go_back (_data1_->browser);
-#line 495 "Application.c"
+#line 504 "Application.c"
 }
 
 
@@ -499,9 +508,9 @@ static void
 ___lambda8__gtk_button_clicked (GtkButton* _sender,
                                 gpointer self)
 {
-#line 104 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 111 "/home/charalabos/hartes/src/Application.vala"
 	__lambda8_ (self);
-#line 505 "Application.c"
+#line 514 "Application.c"
 }
 
 
@@ -509,11 +518,11 @@ static void
 __lambda9_ (Block1Data* _data1_)
 {
 	TestApplication* self;
-#line 108 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 115 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 109 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 116 "/home/charalabos/hartes/src/Application.vala"
 	webkit_web_view_go_forward (_data1_->browser);
-#line 517 "Application.c"
+#line 526 "Application.c"
 }
 
 
@@ -521,9 +530,9 @@ static void
 ___lambda9__gtk_button_clicked (GtkButton* _sender,
                                 gpointer self)
 {
-#line 108 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 115 "/home/charalabos/hartes/src/Application.vala"
 	__lambda9_ (self);
-#line 527 "Application.c"
+#line 536 "Application.c"
 }
 
 
@@ -546,141 +555,168 @@ test_application_real_activate (GApplication* base)
 	GtkButton* _tmp6_;
 	GtkButton* reload = NULL;
 	GtkButton* _tmp7_;
+	GtkSettings* gtk_settings = NULL;
+	GtkSettings* _tmp8_;
+	GtkSettings* _tmp9_;
+	GraniteModeSwitch* mode_switch = NULL;
+	GraniteModeSwitch* _tmp10_;
 	welcomeview* wv = NULL;
-	welcomeview* _tmp8_;
+	welcomeview* _tmp11_;
 	GtkWindow* welcomemessage = NULL;
-	GtkWindow* _tmp9_;
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+	GtkWindow* _tmp12_;
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	self = (TestApplication*) base;
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_data1_ = g_slice_new0 (Block1Data);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_data1_->_ref_count_ = 1;
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_data1_->self = g_object_ref (self);
-#line 69 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 69 "/home/charalabos/hartes/src/Application.vala"
 	_tmp0_ = (GtkApplicationWindow*) gtk_application_window_new ((GtkApplication*) self);
-#line 69 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 69 "/home/charalabos/hartes/src/Application.vala"
 	g_object_ref_sink (_tmp0_);
-#line 69 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 69 "/home/charalabos/hartes/src/Application.vala"
 	window = _tmp0_;
-#line 70 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 70 "/home/charalabos/hartes/src/Application.vala"
 	_tmp1_ = (GtkGrid*) gtk_grid_new ();
-#line 70 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 70 "/home/charalabos/hartes/src/Application.vala"
 	g_object_ref_sink (_tmp1_);
-#line 70 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 70 "/home/charalabos/hartes/src/Application.vala"
 	main_grid = _tmp1_;
-#line 71 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 71 "/home/charalabos/hartes/src/Application.vala"
 	_tmp2_ = (GtkHeaderBar*) gtk_header_bar_new ();
-#line 71 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 71 "/home/charalabos/hartes/src/Application.vala"
 	g_object_ref_sink (_tmp2_);
-#line 71 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 71 "/home/charalabos/hartes/src/Application.vala"
 	headerbar = _tmp2_;
-#line 72 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 72 "/home/charalabos/hartes/src/Application.vala"
 	_tmp3_ = (GtkEntry*) gtk_entry_new ();
-#line 72 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 72 "/home/charalabos/hartes/src/Application.vala"
 	g_object_ref_sink (_tmp3_);
-#line 72 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 72 "/home/charalabos/hartes/src/Application.vala"
 	_data1_->searchbar = _tmp3_;
-#line 73 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 73 "/home/charalabos/hartes/src/Application.vala"
 	_tmp4_ = (WebKitWebView*) webkit_web_view_new ();
-#line 73 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 73 "/home/charalabos/hartes/src/Application.vala"
 	g_object_ref_sink (_tmp4_);
-#line 73 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 73 "/home/charalabos/hartes/src/Application.vala"
 	_data1_->browser = _tmp4_;
-#line 74 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 74 "/home/charalabos/hartes/src/Application.vala"
 	_tmp5_ = (GtkButton*) gtk_button_new_with_label ("<-");
-#line 74 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 74 "/home/charalabos/hartes/src/Application.vala"
 	g_object_ref_sink (_tmp5_);
-#line 74 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 74 "/home/charalabos/hartes/src/Application.vala"
 	back = _tmp5_;
-#line 75 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 75 "/home/charalabos/hartes/src/Application.vala"
 	_tmp6_ = (GtkButton*) gtk_button_new_with_label ("->");
-#line 75 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 75 "/home/charalabos/hartes/src/Application.vala"
 	g_object_ref_sink (_tmp6_);
-#line 75 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 75 "/home/charalabos/hartes/src/Application.vala"
 	forward = _tmp6_;
-#line 76 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 76 "/home/charalabos/hartes/src/Application.vala"
 	_tmp7_ = (GtkButton*) gtk_button_new_with_label ("⟳");
-#line 76 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 76 "/home/charalabos/hartes/src/Application.vala"
 	g_object_ref_sink (_tmp7_);
-#line 76 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 76 "/home/charalabos/hartes/src/Application.vala"
 	reload = _tmp7_;
-#line 78 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
-	_tmp8_ = welcomeview_new ();
-#line 78 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
-	g_object_ref_sink (_tmp8_);
-#line 78 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
-	wv = _tmp8_;
-#line 80 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
-	_tmp9_ = (GtkWindow*) gtk_window_new (GTK_WINDOW_TOPLEVEL);
-#line 80 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
-	g_object_ref_sink (_tmp9_);
-#line 80 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
-	welcomemessage = _tmp9_;
-#line 82 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 78 "/home/charalabos/hartes/src/Application.vala"
+	_tmp8_ = gtk_settings_get_default ();
+#line 78 "/home/charalabos/hartes/src/Application.vala"
+	_tmp9_ = _g_object_ref0 (_tmp8_);
+#line 78 "/home/charalabos/hartes/src/Application.vala"
+	gtk_settings = _tmp9_;
+#line 79 "/home/charalabos/hartes/src/Application.vala"
+	_tmp10_ = granite_mode_switch_new_from_icon_name ("display-brightness-symbolic", "weather-clear-night-symbolic");
+#line 79 "/home/charalabos/hartes/src/Application.vala"
+	g_object_ref_sink (_tmp10_);
+#line 79 "/home/charalabos/hartes/src/Application.vala"
+	mode_switch = _tmp10_;
+#line 81 "/home/charalabos/hartes/src/Application.vala"
+	gtk_widget_set_valign ((GtkWidget*) mode_switch, GTK_ALIGN_CENTER);
+#line 82 "/home/charalabos/hartes/src/Application.vala"
+	g_object_bind_property_with_closures ((GObject*) mode_switch, "active", (GObject*) gtk_settings, "gtk_application_prefer_dark_theme", G_BINDING_DEFAULT, (GClosure*) ((NULL == NULL) ? NULL : g_cclosure_new ((GCallback) NULL, NULL, (GClosureNotify) NULL)), (GClosure*) ((NULL == NULL) ? NULL : g_cclosure_new ((GCallback) NULL, NULL, (GClosureNotify) NULL)));
+#line 84 "/home/charalabos/hartes/src/Application.vala"
+	_tmp11_ = welcomeview_new ();
+#line 84 "/home/charalabos/hartes/src/Application.vala"
+	g_object_ref_sink (_tmp11_);
+#line 84 "/home/charalabos/hartes/src/Application.vala"
+	wv = _tmp11_;
+#line 86 "/home/charalabos/hartes/src/Application.vala"
+	_tmp12_ = (GtkWindow*) gtk_window_new (GTK_WINDOW_TOPLEVEL);
+#line 86 "/home/charalabos/hartes/src/Application.vala"
+	g_object_ref_sink (_tmp12_);
+#line 86 "/home/charalabos/hartes/src/Application.vala"
+	welcomemessage = _tmp12_;
+#line 88 "/home/charalabos/hartes/src/Application.vala"
 	gtk_container_add ((GtkContainer*) welcomemessage, (GtkWidget*) wv);
-#line 83 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 89 "/home/charalabos/hartes/src/Application.vala"
 	gtk_window_set_title (welcomemessage, "About");
-#line 85 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 91 "/home/charalabos/hartes/src/Application.vala"
 	gtk_grid_attach (main_grid, (GtkWidget*) back, 0, 0, 1, 1);
-#line 86 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 92 "/home/charalabos/hartes/src/Application.vala"
 	gtk_grid_attach_next_to (main_grid, (GtkWidget*) forward, (GtkWidget*) back, GTK_POS_RIGHT, 1, 1);
-#line 87 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 93 "/home/charalabos/hartes/src/Application.vala"
 	gtk_grid_attach_next_to (main_grid, (GtkWidget*) reload, (GtkWidget*) forward, GTK_POS_RIGHT, 1, 1);
-#line 89 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 94 "/home/charalabos/hartes/src/Application.vala"
+	gtk_grid_attach_next_to (main_grid, (GtkWidget*) mode_switch, (GtkWidget*) reload, GTK_POS_RIGHT, 1, 1);
+#line 96 "/home/charalabos/hartes/src/Application.vala"
 	g_signal_connect_data (reload, "clicked", (GCallback) ___lambda5__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
-#line 93 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 100 "/home/charalabos/hartes/src/Application.vala"
 	gtk_widget_set_valign ((GtkWidget*) _data1_->searchbar, GTK_ALIGN_CENTER);
-#line 94 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 101 "/home/charalabos/hartes/src/Application.vala"
 	gtk_widget_set_size_request ((GtkWidget*) _data1_->searchbar, 900, 10);
-#line 96 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 103 "/home/charalabos/hartes/src/Application.vala"
 	g_signal_connect_data (_data1_->browser, "load-changed", (GCallback) ___lambda6__webkit_web_view_load_changed, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
-#line 100 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 107 "/home/charalabos/hartes/src/Application.vala"
 	g_signal_connect_data (_data1_->searchbar, "activate", (GCallback) ___lambda7__gtk_entry_activate, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
-#line 104 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 111 "/home/charalabos/hartes/src/Application.vala"
 	g_signal_connect_data (back, "clicked", (GCallback) ___lambda8__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
-#line 108 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 115 "/home/charalabos/hartes/src/Application.vala"
 	g_signal_connect_data (forward, "clicked", (GCallback) ___lambda9__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
-#line 112 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 119 "/home/charalabos/hartes/src/Application.vala"
 	webkit_web_view_load_uri (_data1_->browser, "https://google.com");
-#line 114 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 121 "/home/charalabos/hartes/src/Application.vala"
 	gtk_header_bar_set_show_close_button (headerbar, TRUE);
-#line 115 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 122 "/home/charalabos/hartes/src/Application.vala"
 	gtk_header_bar_set_custom_title (headerbar, (GtkWidget*) _data1_->searchbar);
-#line 116 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 123 "/home/charalabos/hartes/src/Application.vala"
 	gtk_header_bar_pack_end (headerbar, (GtkWidget*) main_grid);
-#line 117 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 124 "/home/charalabos/hartes/src/Application.vala"
 	gtk_window_set_titlebar ((GtkWindow*) window, (GtkWidget*) headerbar);
-#line 119 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 126 "/home/charalabos/hartes/src/Application.vala"
 	gtk_window_set_default_size ((GtkWindow*) window, 900, 640);
-#line 120 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 127 "/home/charalabos/hartes/src/Application.vala"
 	gtk_container_add ((GtkContainer*) window, (GtkWidget*) _data1_->browser);
-#line 121 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 128 "/home/charalabos/hartes/src/Application.vala"
 	gtk_widget_show_all ((GtkWidget*) window);
-#line 122 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 129 "/home/charalabos/hartes/src/Application.vala"
 	gtk_widget_show_all ((GtkWidget*) welcomemessage);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (welcomemessage);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (wv);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
+	_g_object_unref0 (mode_switch);
+#line 68 "/home/charalabos/hartes/src/Application.vala"
+	_g_object_unref0 (gtk_settings);
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (reload);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (forward);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (back);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (headerbar);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (main_grid);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (window);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	block1_data_unref (_data1_);
-#line 68 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 68 "/home/charalabos/hartes/src/Application.vala"
 	_data1_ = NULL;
-#line 684 "Application.c"
+#line 720 "Application.c"
 }
 
 
@@ -691,17 +727,17 @@ test_application_main (gchar** args,
 	gint result = 0;
 	TestApplication* app = NULL;
 	TestApplication* _tmp0_;
-#line 128 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 135 "/home/charalabos/hartes/src/Application.vala"
 	_tmp0_ = test_application_new ();
-#line 128 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 135 "/home/charalabos/hartes/src/Application.vala"
 	app = _tmp0_;
-#line 129 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 136 "/home/charalabos/hartes/src/Application.vala"
 	result = granite_application_run ((GraniteApplication*) app, args, args_length1);
-#line 129 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 136 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (app);
-#line 129 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 136 "/home/charalabos/hartes/src/Application.vala"
 	return result;
-#line 705 "Application.c"
+#line 741 "Application.c"
 }
 
 
@@ -709,20 +745,20 @@ int
 main (int argc,
       char ** argv)
 {
-#line 127 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 134 "/home/charalabos/hartes/src/Application.vala"
 	return test_application_main (argv, argc);
-#line 715 "Application.c"
+#line 751 "Application.c"
 }
 
 
 static void
 test_application_class_init (TestApplicationClass * klass)
 {
-#line 57 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 57 "/home/charalabos/hartes/src/Application.vala"
 	test_application_parent_class = g_type_class_peek_parent (klass);
-#line 57 "/media/charalabos/FatBoy/Documents/elementary/com.github.deep-dive/src/Application.vala"
+#line 57 "/home/charalabos/hartes/src/Application.vala"
 	((GApplicationClass *) klass)->activate = (void (*) (GApplication*)) test_application_real_activate;
-#line 726 "Application.c"
+#line 762 "Application.c"
 }
 
 

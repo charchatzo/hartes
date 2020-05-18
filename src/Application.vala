@@ -74,6 +74,12 @@ namespace Test {
             var back = new Gtk.Button.with_label ("<-");
             var forward = new Gtk.Button.with_label ("->");
             var reload = new Gtk.Button.with_label ("⟳");
+            
+            var gtk_settings = Gtk.Settings.get_default ();
+            var mode_switch = new Granite.ModeSwitch.from_icon_name ("display-brightness-symbolic", "weather-clear-night-symbolic");
+            
+            mode_switch.valign = Gtk.Align.CENTER;
+            mode_switch.bind_property ("active", gtk_settings, "gtk_application_prefer_dark_theme");
 
             var wv = new welcomeview ();
 
@@ -85,6 +91,7 @@ namespace Test {
             main_grid.attach (back, 0, 0, 1, 1);
             main_grid.attach_next_to (forward, back, Gtk.PositionType.RIGHT, 1, 1);
             main_grid.attach_next_to (reload, forward, Gtk.PositionType.RIGHT, 1, 1);
+            main_grid.attach_next_to (mode_switch, reload, Gtk.PositionType.RIGHT, 1, 1);
 
             reload.clicked.connect (() => {
                 browser.reload ();
