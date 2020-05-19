@@ -85,7 +85,7 @@ namespace Test {
 
             settings_section.attach (mode_switch, 0, 0, 10, 10);
             settings_section.attach_next_to (dark_mode_label, mode_switch, Gtk.PositionType.LEFT, 10, 10);
-
+            
             switcher.stack = stack;
             stack.expand = true;
             stack.add_titled (browser, "browser_section_stacked", "Browser");
