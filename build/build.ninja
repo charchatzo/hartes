@@ -55,7 +55,7 @@ rule CUSTOM_COMMAND_DEP
  restat = 1
 
 rule REGENERATE_BUILD
- command = /usr/bin/meson --internal regenerate /home/charalabos/hartes /home/charalabos/hartes/build1.2 --backend ninja
+ command = /usr/bin/meson --internal regenerate /home/charalabos/hartes /home/charalabos/hartes/build --backend ninja
  description = Regenerating build files.
  generator = 1
 
@@ -110,7 +110,7 @@ build install: phony meson-install
 
 build meson-dist: CUSTOM_COMMAND PHONY
  DESC = Creating$ source$ packages
- COMMAND = /usr/bin/meson --internal dist /home/charalabos/hartes /home/charalabos/hartes/build1.2 /usr/bin/meson
+ COMMAND = /usr/bin/meson --internal dist /home/charalabos/hartes /home/charalabos/hartes/build /usr/bin/meson
  pool = console
 
 build dist: phony meson-dist
@@ -118,7 +118,7 @@ build dist: phony meson-dist
 # Suffix
 
 build meson-scan-build: CUSTOM_COMMAND PHONY
- COMMAND = /usr/bin/meson --internal scanbuild /home/charalabos/hartes /home/charalabos/hartes/build1.2 /usr/bin/meson
+ COMMAND = /usr/bin/meson --internal scanbuild /home/charalabos/hartes /home/charalabos/hartes/build /usr/bin/meson
  pool = console
 
 build scan-build: phony meson-scan-build
@@ -136,7 +136,7 @@ default all
 build clean: phony meson-clean
 
 build meson-clean-ctlist: CUSTOM_COMMAND PHONY
- COMMAND = /usr/bin/meson --internal cleantrees /home/charalabos/hartes/build1.2/meson-private/cleantrees.dat
+ COMMAND = /usr/bin/meson --internal cleantrees /home/charalabos/hartes/build/meson-private/cleantrees.dat
  description = Cleaning$ custom$ target$ directories.
 
 build clean-ctlist: phony meson-clean-ctlist
