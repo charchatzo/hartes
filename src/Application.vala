@@ -25,7 +25,7 @@ using WebKit;
 
 public class welcomeview : Gtk.Grid {
     construct {
-        var welcome = new Granite.Widgets.Welcome ("Deep Dive", "This is a simple web browser.\nChanges: Dark mode switch and browser/settings stackswitcher added");
+        var welcome = new Granite.Widgets.Welcome ("Deep Dive", "This is a simple web browser.\nChanges: Dark mode switch, icons on back/forward and reload buttons and browser/settings stackswitcher added");
 
         add (welcome);
 
