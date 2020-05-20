@@ -29,6 +29,7 @@ dependencies = [
     dependency('gio-unix-2.0', version: '>=2.20'),
     dependency('granite'),
     dependency('webkit2gtk-4.0'),
+    dependency('cairo'),
 ]
 
 # Adds subfolders specific build system

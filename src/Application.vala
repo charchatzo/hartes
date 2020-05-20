@@ -25,7 +25,7 @@ using WebKit;
 
 public class welcomeview : Gtk.Grid {
     construct {
-        var welcome = new Granite.Widgets.Welcome ("Deep dive", "This is a simple web browser.\nChanges: Dark mode switch added");
+        var welcome = new Granite.Widgets.Welcome ("Deep Dive", "This is a simple web browser.\nChanges: Dark mode switch and browser/settings stackswitcher added");
 
         add (welcome);
 
@@ -71,15 +71,20 @@ namespace Test {
             var headerbar = new Gtk.HeaderBar ();
             var searchbar = new Gtk.Entry ();
             var browser = new WebView ();
-            var back = new Gtk.Button.with_label ("<-");
-            var forward = new Gtk.Button.with_label ("->");
-            var reload = new Gtk.Button.with_label ("⟳");
+            var back = new Gtk.Button.from_icon_name ("go-previous-symbolic", Gtk.IconSize.BUTTON);
+            var forward = new Gtk.Button.from_icon_name ("go-next-symbolic", Gtk.IconSize.BUTTON);
+            var reload = new Gtk.Button.from_icon_name ("view-refresh-symbolic", Gtk.IconSize.BUTTON);
             var gtk_settings = Gtk.Settings.get_default ();
             var mode_switch = new Granite.ModeSwitch.from_icon_name ("display-brightness-symbolic", "weather-clear-night-symbolic");
             var switcher = new Gtk.StackSwitcher ();
             var stack = new Gtk.Stack ();
             var settings_section = new Gtk.Grid ();
-            var dark_mode_label = new Gtk.Label ("Dark mode.");
+            var dark_mode_label = new Gtk.Label ("Dark mode:  ");
+            var custom_title_grid = new Gtk.Grid ();
+
+            custom_title_grid.attach (searchbar, 0, 0, 1, 1);
+            custom_title_grid.attach_next_to (reload, searchbar, Gtk.PositionType.RIGHT, 1, 1);
+            custom_title_grid.attach_next_to (main_grid, searchbar, Gtk.PositionType.LEFT, 1, 1);
 
             browser.load_uri ("https://google.com");
 
@@ -90,7 +95,7 @@ namespace Test {
             stack.expand = true;
             stack.add_titled (browser, "browser_section_stacked", "Browser");
             stack.add_titled (settings_section, "settings_section_stacked", "Settings");
-            
+
             mode_switch.bind_property ("active", gtk_settings, "gtk_application_prefer_dark_theme");
 
             var wv = new welcomeview ();
@@ -102,7 +107,6 @@ namespace Test {
 
             main_grid.attach (back, 0, 0, 1, 1);
             main_grid.attach_next_to (forward, back, Gtk.PositionType.RIGHT, 1, 1);
-            main_grid.attach_next_to (reload, forward, Gtk.PositionType.RIGHT, 1, 1);
 
             reload.clicked.connect (() => {
                 browser.reload ();
@@ -128,9 +132,8 @@ namespace Test {
             });
 
             headerbar.set_show_close_button (true);
-            headerbar.set_custom_title (searchbar);
-            headerbar.pack_end (main_grid);
-            headerbar.pack_start (switcher);
+            headerbar.set_custom_title (custom_title_grid);
+            headerbar.pack_end (switcher);
             window.set_titlebar (headerbar);
 
             window.set_default_size (900, 640);
