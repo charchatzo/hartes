@@ -85,6 +85,11 @@ namespace Dive {
             var save_button = new Gtk.Button.with_label ("Save settings");
             var start_page_entry = new Gtk.Entry ();
             var start_page_label = new Gtk.Label ("Default page: ");
+            var default_page_set_current = new Gtk.Button.with_label ("Set current page as default");
+
+            default_page_set_current.clicked.connect (() => {
+                start_page_entry.text = browser.get_uri ();
+            });
 
             start_page_entry.set_text (settings.get_string("default-page"));
 
@@ -100,7 +105,8 @@ namespace Dive {
             settings_section.attach (mode_switch, 0, 0, 10, 10);
             settings_section.attach_next_to (dark_mode_label, mode_switch, Gtk.PositionType.LEFT, 10, 10);
             settings_section.attach_next_to (start_page_entry, mode_switch, Gtk.PositionType.BOTTOM, 10, 10);
-            settings_section.attach_next_to (save_button, start_page_entry, Gtk.PositionType.BOTTOM, 10, 10);
+            settings_section.attach_next_to (default_page_set_current, start_page_entry, Gtk.PositionType.BOTTOM, 10, 10);
+            settings_section.attach_next_to (save_button, default_page_set_current, Gtk.PositionType.BOTTOM, 10, 10);
             settings_section.attach_next_to (start_page_label, start_page_entry, Gtk.PositionType.LEFT, 10, 10);
 
             switcher.stack = stack;
