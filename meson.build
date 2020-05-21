@@ -6,6 +6,9 @@ message ('project name and programming language')
 # Adds project arguments
 message ('Adds project arguments')
 
+subdir ('data')
+meson.add_install_script ('meson/post_install.py')
+
 add_project_arguments([
         '-DGETTEXT_PACKAGE=\"@0@\"'.format(meson.project_name())
     ],

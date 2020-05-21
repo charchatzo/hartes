@@ -25,7 +25,7 @@ using WebKit;
 
 public class welcomeview : Gtk.Grid {
     construct {
-        var welcome = new Granite.Widgets.Welcome ("Deep Dive", "This is a simple web browser.\nChanges: Dark mode switch, icons on back/forward and reload buttons and browser/settings stackswitcher added");
+        var welcome = new Granite.Widgets.Welcome ("Deep Dive", "This is a simple web browser.\nChanges: Save settings button to\nsave all changed settings added");
 
         add (welcome);
 
@@ -53,7 +53,7 @@ public class welcomeview : Gtk.Grid {
 }
 
 
-namespace Test {
+namespace Dive {
     public class Application : Granite.Application {
 
         public Application () {
@@ -65,7 +65,7 @@ namespace Test {
 
 
 
-        protected override void activate () {
+        public override void activate () {
             var window = new Gtk.ApplicationWindow (this);
             var main_grid = new Gtk.Grid ();
             var headerbar = new Gtk.HeaderBar ();
@@ -81,15 +81,27 @@ namespace Test {
             var settings_section = new Gtk.Grid ();
             var dark_mode_label = new Gtk.Label ("Dark mode:  ");
             var custom_title_grid = new Gtk.Grid ();
+            var settings = new GLib.Settings ("com.github.deep-dive");
+            var save_button = new Gtk.Button.with_label ("Save settings");
+            var start_page_entry = new Gtk.Entry ();
+            var start_page_label = new Gtk.Label ("Default page: ");
+
+            start_page_entry.set_text (settings.get_string("default-page"));
+
+            window.move (settings.get_int("pos-x"), settings.get_int("pos-y"));
+            window.resize (settings.get_int("window-width"), settings.get_int("window-height"));
 
             custom_title_grid.attach (searchbar, 0, 0, 1, 1);
             custom_title_grid.attach_next_to (reload, searchbar, Gtk.PositionType.RIGHT, 1, 1);
             custom_title_grid.attach_next_to (main_grid, searchbar, Gtk.PositionType.LEFT, 1, 1);
 
-            browser.load_uri ("https://google.com");
+            browser.load_uri (start_page_entry.text);
 
             settings_section.attach (mode_switch, 0, 0, 10, 10);
             settings_section.attach_next_to (dark_mode_label, mode_switch, Gtk.PositionType.LEFT, 10, 10);
+            settings_section.attach_next_to (start_page_entry, mode_switch, Gtk.PositionType.BOTTOM, 10, 10);
+            settings_section.attach_next_to (save_button, start_page_entry, Gtk.PositionType.BOTTOM, 10, 10);
+            settings_section.attach_next_to (start_page_label, start_page_entry, Gtk.PositionType.LEFT, 10, 10);
 
             switcher.stack = stack;
             stack.expand = true;
@@ -136,16 +148,25 @@ namespace Test {
             headerbar.pack_end (switcher);
             window.set_titlebar (headerbar);
 
+            save_button.clicked.connect (() => {
+                int width, height, x, y;
+                window.get_position (out x, out y);
+                window.get_size (out width, out height);
+                settings.set_int ("window-width", width);
+                settings.set_int ("window-height", height);
+                settings.set_int ("pos-x", x);
+                settings.set_int ("pos-y", y);
+                settings.set_string ("default-page", start_page_entry.text);
+            });
+
             window.set_default_size (900, 640);
             window.add (stack);
             window.show_all ();
             welcomemessage.show_all ();
         }
 
-
-
         public static int main (string[] args) {
-            var app = new Test.Application ();
+            var app = new Dive.Application ();
             return app.run (args);
         }
     }
