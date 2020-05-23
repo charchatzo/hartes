@@ -5,9 +5,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_group>charalabos</project_group>
   <project_license>GPL-3.0+</project_license>
-  <name></name>
-  <summary></summary>
-  <description></description>
+  <name/>
+  <summary/>
+  <description/>
   <releases>
     <release version="0.0.1" date="2018-05-05"/>
   </releases>
@@ -44,7 +44,7 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <developer_name>charalabos</developer_name>
-  <url type="homepage"></url>
+  <url type="homepage"/>
   <url type="bugtracker">http://github.com/charchatzo/Test/issues</url>
   <url type="help">http://github.com/charchatzo/Test/issues</url>
   <update_contact>charchatzo2008_AT_gmail.com</update_contact>
