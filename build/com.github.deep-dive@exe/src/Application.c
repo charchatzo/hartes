@@ -125,20 +125,29 @@ static void __lambda6_ (Block1Data* _data1_);
 static void ___lambda6__gtk_button_clicked (GtkButton* _sender,
                                      gpointer self);
 static void __lambda7_ (Block1Data* _data1_);
-static void ___lambda7__webkit_web_view_load_changed (WebKitWebView* _sender,
-                                               WebKitLoadEvent load_event,
-                                               gpointer self);
+static void ___lambda7__gtk_button_clicked (GtkButton* _sender,
+                                     gpointer self);
 static void __lambda8_ (Block1Data* _data1_);
-static void ___lambda8__gtk_entry_activate (GtkEntry* _sender,
+static void ___lambda8__gtk_button_clicked (GtkButton* _sender,
                                      gpointer self);
 static void __lambda9_ (Block1Data* _data1_);
 static void ___lambda9__gtk_button_clicked (GtkButton* _sender,
                                      gpointer self);
 static void __lambda10_ (Block1Data* _data1_);
-static void ___lambda10__gtk_button_clicked (GtkButton* _sender,
-                                      gpointer self);
+static void ___lambda10__webkit_web_view_load_changed (WebKitWebView* _sender,
+                                                WebKitLoadEvent load_event,
+                                                gpointer self);
 static void __lambda11_ (Block1Data* _data1_);
-static void ___lambda11__gtk_button_clicked (GtkButton* _sender,
+static void ___lambda11__gtk_entry_activate (GtkEntry* _sender,
+                                      gpointer self);
+static void __lambda12_ (Block1Data* _data1_);
+static void ___lambda12__gtk_button_clicked (GtkButton* _sender,
+                                      gpointer self);
+static void __lambda13_ (Block1Data* _data1_);
+static void ___lambda13__gtk_button_clicked (GtkButton* _sender,
+                                      gpointer self);
+static void __lambda14_ (Block1Data* _data1_);
+static void ___lambda14__gtk_button_clicked (GtkButton* _sender,
                                       gpointer self);
 gint dive_application_main (gchar** args,
                             int args_length1);
@@ -152,7 +161,7 @@ welcomeview_construct (GType object_type)
 	self = (welcomeview*) g_object_new (object_type, NULL);
 #line 26 "/home/charalabos/hartes/src/Application.vala"
 	return self;
-#line 156 "Application.c"
+#line 165 "Application.c"
 }
 
 
@@ -161,7 +170,7 @@ welcomeview_new (void)
 {
 #line 26 "/home/charalabos/hartes/src/Application.vala"
 	return welcomeview_construct (TYPE_WELCOMEVIEW);
-#line 165 "Application.c"
+#line 174 "Application.c"
 }
 
 
@@ -174,14 +183,14 @@ _welcomeview___lambda4_ (welcomeview* self,
 	switch (index) {
 #line 33 "/home/charalabos/hartes/src/Application.vala"
 		case 0:
-#line 178 "Application.c"
+#line 187 "Application.c"
 		{
 			{
 #line 36 "/home/charalabos/hartes/src/Application.vala"
 				g_app_info_launch_default_for_uri ("https://valadoc.org/granite/Granite.html", NULL, &_inner_error0_);
 #line 36 "/home/charalabos/hartes/src/Application.vala"
 				if (G_UNLIKELY (_inner_error0_ != NULL)) {
-#line 185 "Application.c"
+#line 194 "Application.c"
 					goto __catch0_g_error;
 				}
 			}
@@ -203,7 +212,7 @@ _welcomeview___lambda4_ (welcomeview* self,
 				g_warning ("Application.vala:38: %s", _tmp1_);
 #line 35 "/home/charalabos/hartes/src/Application.vala"
 				_g_error_free0 (e);
-#line 207 "Application.c"
+#line 216 "Application.c"
 			}
 			__finally0:
 #line 35 "/home/charalabos/hartes/src/Application.vala"
@@ -214,22 +223,22 @@ _welcomeview___lambda4_ (welcomeview* self,
 				g_clear_error (&_inner_error0_);
 #line 35 "/home/charalabos/hartes/src/Application.vala"
 				return;
-#line 218 "Application.c"
+#line 227 "Application.c"
 			}
 #line 41 "/home/charalabos/hartes/src/Application.vala"
 			break;
-#line 222 "Application.c"
+#line 231 "Application.c"
 		}
 #line 33 "/home/charalabos/hartes/src/Application.vala"
 		case 1:
-#line 226 "Application.c"
+#line 235 "Application.c"
 		{
 			{
 #line 44 "/home/charalabos/hartes/src/Application.vala"
 				g_app_info_launch_default_for_uri ("https://github.com/elementary/granite", NULL, &_inner_error0_);
 #line 44 "/home/charalabos/hartes/src/Application.vala"
 				if (G_UNLIKELY (_inner_error0_ != NULL)) {
-#line 233 "Application.c"
+#line 242 "Application.c"
 					goto __catch1_g_error;
 				}
 			}
@@ -251,7 +260,7 @@ _welcomeview___lambda4_ (welcomeview* self,
 				g_warning ("Application.vala:46: %s", _tmp3_);
 #line 43 "/home/charalabos/hartes/src/Application.vala"
 				_g_error_free0 (e);
-#line 255 "Application.c"
+#line 264 "Application.c"
 			}
 			__finally1:
 #line 43 "/home/charalabos/hartes/src/Application.vala"
@@ -262,16 +271,16 @@ _welcomeview___lambda4_ (welcomeview* self,
 				g_clear_error (&_inner_error0_);
 #line 43 "/home/charalabos/hartes/src/Application.vala"
 				return;
-#line 266 "Application.c"
+#line 275 "Application.c"
 			}
 #line 49 "/home/charalabos/hartes/src/Application.vala"
 			break;
-#line 270 "Application.c"
+#line 279 "Application.c"
 		}
 		default:
 #line 33 "/home/charalabos/hartes/src/Application.vala"
 		break;
-#line 275 "Application.c"
+#line 284 "Application.c"
 	}
 }
 
@@ -283,7 +292,7 @@ __welcomeview___lambda4__granite_widgets_welcome_activated (GraniteWidgetsWelcom
 {
 #line 32 "/home/charalabos/hartes/src/Application.vala"
 	_welcomeview___lambda4_ ((welcomeview*) self, index);
-#line 287 "Application.c"
+#line 296 "Application.c"
 }
 
 
@@ -306,9 +315,7 @@ welcomeview_constructor (GType type,
 #line 27 "/home/charalabos/hartes/src/Application.vala"
 	self = G_TYPE_CHECK_INSTANCE_CAST (obj, TYPE_WELCOMEVIEW, welcomeview);
 #line 28 "/home/charalabos/hartes/src/Application.vala"
-	_tmp0_ = granite_widgets_welcome_new ("Deep Dive", "This is a simple web browser.\n" \
-"Changes: Save settings button to\n" \
-"save all changed settings added");
+	_tmp0_ = granite_widgets_welcome_new ("Deep Dive", "This is a simple web browser.");
 #line 28 "/home/charalabos/hartes/src/Application.vala"
 	g_object_ref_sink (_tmp0_);
 #line 28 "/home/charalabos/hartes/src/Application.vala"
@@ -325,7 +332,7 @@ welcomeview_constructor (GType type,
 	_g_object_unref0 (welcome);
 #line 27 "/home/charalabos/hartes/src/Application.vala"
 	return obj;
-#line 327 "Application.c"
+#line 336 "Application.c"
 }
 
 
@@ -336,7 +343,7 @@ welcomeview_class_init (welcomeviewClass * klass)
 	welcomeview_parent_class = g_type_class_peek_parent (klass);
 #line 26 "/home/charalabos/hartes/src/Application.vala"
 	G_OBJECT_CLASS (klass)->constructor = welcomeview_constructor;
-#line 338 "Application.c"
+#line 347 "Application.c"
 }
 
 
@@ -368,7 +375,7 @@ dive_application_construct (GType object_type)
 	self = (DiveApplication*) g_object_new (object_type, "application-id", "com.github.Deep-dive", "flags", G_APPLICATION_FLAGS_NONE, NULL);
 #line 59 "/home/charalabos/hartes/src/Application.vala"
 	return self;
-#line 370 "Application.c"
+#line 379 "Application.c"
 }
 
 
@@ -377,7 +384,7 @@ dive_application_new (void)
 {
 #line 59 "/home/charalabos/hartes/src/Application.vala"
 	return dive_application_construct (DIVE_TYPE_APPLICATION);
-#line 379 "Application.c"
+#line 388 "Application.c"
 }
 
 
@@ -388,7 +395,7 @@ block1_data_ref (Block1Data* _data1_)
 	g_atomic_int_inc (&_data1_->_ref_count_);
 #line 68 "/home/charalabos/hartes/src/Application.vala"
 	return _data1_;
-#line 390 "Application.c"
+#line 399 "Application.c"
 }
 
 
@@ -399,7 +406,7 @@ block1_data_unref (void * _userdata_)
 	_data1_ = (Block1Data*) _userdata_;
 #line 68 "/home/charalabos/hartes/src/Application.vala"
 	if (g_atomic_int_dec_and_test (&_data1_->_ref_count_)) {
-#line 401 "Application.c"
+#line 410 "Application.c"
 		DiveApplication* self;
 #line 68 "/home/charalabos/hartes/src/Application.vala"
 		self = _data1_->self;
@@ -417,7 +424,7 @@ block1_data_unref (void * _userdata_)
 		_g_object_unref0 (self);
 #line 68 "/home/charalabos/hartes/src/Application.vala"
 		g_slice_free (Block1Data, _data1_);
-#line 419 "Application.c"
+#line 428 "Application.c"
 	}
 }
 
@@ -427,7 +434,7 @@ _g_object_ref0 (gpointer self)
 {
 #line 77 "/home/charalabos/hartes/src/Application.vala"
 	return self ? g_object_ref (self) : NULL;
-#line 429 "Application.c"
+#line 438 "Application.c"
 }
 
 
@@ -436,13 +443,13 @@ __lambda5_ (Block1Data* _data1_)
 {
 	DiveApplication* self;
 	const gchar* _tmp0_;
-#line 90 "/home/charalabos/hartes/src/Application.vala"
+#line 93 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 91 "/home/charalabos/hartes/src/Application.vala"
+#line 94 "/home/charalabos/hartes/src/Application.vala"
 	_tmp0_ = webkit_web_view_get_uri (_data1_->browser);
-#line 91 "/home/charalabos/hartes/src/Application.vala"
+#line 94 "/home/charalabos/hartes/src/Application.vala"
 	gtk_entry_set_text (_data1_->start_page_entry, _tmp0_);
-#line 444 "Application.c"
+#line 453 "Application.c"
 }
 
 
@@ -450,9 +457,9 @@ static void
 ___lambda5__gtk_button_clicked (GtkButton* _sender,
                                 gpointer self)
 {
-#line 90 "/home/charalabos/hartes/src/Application.vala"
+#line 93 "/home/charalabos/hartes/src/Application.vala"
 	__lambda5_ (self);
-#line 454 "Application.c"
+#line 463 "Application.c"
 }
 
 
@@ -460,11 +467,11 @@ static void
 __lambda6_ (Block1Data* _data1_)
 {
 	DiveApplication* self;
-#line 129 "/home/charalabos/hartes/src/Application.vala"
+#line 97 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 130 "/home/charalabos/hartes/src/Application.vala"
-	webkit_web_view_reload (_data1_->browser);
-#line 466 "Application.c"
+#line 98 "/home/charalabos/hartes/src/Application.vala"
+	gtk_entry_set_text (_data1_->start_page_entry, "https://google.com");
+#line 475 "Application.c"
 }
 
 
@@ -472,9 +479,9 @@ static void
 ___lambda6__gtk_button_clicked (GtkButton* _sender,
                                 gpointer self)
 {
-#line 129 "/home/charalabos/hartes/src/Application.vala"
+#line 97 "/home/charalabos/hartes/src/Application.vala"
 	__lambda6_ (self);
-#line 476 "Application.c"
+#line 485 "Application.c"
 }
 
 
@@ -482,28 +489,21 @@ static void
 __lambda7_ (Block1Data* _data1_)
 {
 	DiveApplication* self;
-	const gchar* _tmp0_;
-	const gchar* _tmp1_;
-#line 136 "/home/charalabos/hartes/src/Application.vala"
+#line 101 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 137 "/home/charalabos/hartes/src/Application.vala"
-	_tmp0_ = webkit_web_view_get_uri (_data1_->browser);
-#line 137 "/home/charalabos/hartes/src/Application.vala"
-	_tmp1_ = _tmp0_;
-#line 137 "/home/charalabos/hartes/src/Application.vala"
-	gtk_entry_set_text (_data1_->searchbar, _tmp1_);
-#line 494 "Application.c"
+#line 102 "/home/charalabos/hartes/src/Application.vala"
+	gtk_entry_set_text (_data1_->start_page_entry, "https://yahoo.com");
+#line 497 "Application.c"
 }
 
 
 static void
-___lambda7__webkit_web_view_load_changed (WebKitWebView* _sender,
-                                          WebKitLoadEvent load_event,
-                                          gpointer self)
+___lambda7__gtk_button_clicked (GtkButton* _sender,
+                                gpointer self)
 {
-#line 136 "/home/charalabos/hartes/src/Application.vala"
+#line 101 "/home/charalabos/hartes/src/Application.vala"
 	__lambda7_ (self);
-#line 505 "Application.c"
+#line 507 "Application.c"
 }
 
 
@@ -511,27 +511,21 @@ static void
 __lambda8_ (Block1Data* _data1_)
 {
 	DiveApplication* self;
-	const gchar* _tmp0_;
-	const gchar* _tmp1_;
-#line 140 "/home/charalabos/hartes/src/Application.vala"
+#line 105 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 141 "/home/charalabos/hartes/src/Application.vala"
-	_tmp0_ = gtk_entry_get_text (_data1_->searchbar);
-#line 141 "/home/charalabos/hartes/src/Application.vala"
-	_tmp1_ = _tmp0_;
-#line 141 "/home/charalabos/hartes/src/Application.vala"
-	webkit_web_view_load_uri (_data1_->browser, _tmp1_);
-#line 523 "Application.c"
+#line 106 "/home/charalabos/hartes/src/Application.vala"
+	gtk_entry_set_text (_data1_->start_page_entry, "https://duckduckgo.com/");
+#line 519 "Application.c"
 }
 
 
 static void
-___lambda8__gtk_entry_activate (GtkEntry* _sender,
+___lambda8__gtk_button_clicked (GtkButton* _sender,
                                 gpointer self)
 {
-#line 140 "/home/charalabos/hartes/src/Application.vala"
+#line 105 "/home/charalabos/hartes/src/Application.vala"
 	__lambda8_ (self);
-#line 533 "Application.c"
+#line 529 "Application.c"
 }
 
 
@@ -539,11 +533,11 @@ static void
 __lambda9_ (Block1Data* _data1_)
 {
 	DiveApplication* self;
-#line 144 "/home/charalabos/hartes/src/Application.vala"
+#line 147 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 145 "/home/charalabos/hartes/src/Application.vala"
-	webkit_web_view_go_back (_data1_->browser);
-#line 545 "Application.c"
+#line 148 "/home/charalabos/hartes/src/Application.vala"
+	webkit_web_view_reload (_data1_->browser);
+#line 541 "Application.c"
 }
 
 
@@ -551,9 +545,9 @@ static void
 ___lambda9__gtk_button_clicked (GtkButton* _sender,
                                 gpointer self)
 {
-#line 144 "/home/charalabos/hartes/src/Application.vala"
+#line 147 "/home/charalabos/hartes/src/Application.vala"
 	__lambda9_ (self);
-#line 555 "Application.c"
+#line 551 "Application.c"
 }
 
 
@@ -561,26 +555,105 @@ static void
 __lambda10_ (Block1Data* _data1_)
 {
 	DiveApplication* self;
-#line 148 "/home/charalabos/hartes/src/Application.vala"
+	const gchar* _tmp0_;
+	const gchar* _tmp1_;
+#line 154 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 149 "/home/charalabos/hartes/src/Application.vala"
-	webkit_web_view_go_forward (_data1_->browser);
-#line 567 "Application.c"
+#line 155 "/home/charalabos/hartes/src/Application.vala"
+	_tmp0_ = webkit_web_view_get_uri (_data1_->browser);
+#line 155 "/home/charalabos/hartes/src/Application.vala"
+	_tmp1_ = _tmp0_;
+#line 155 "/home/charalabos/hartes/src/Application.vala"
+	gtk_entry_set_text (_data1_->searchbar, _tmp1_);
+#line 569 "Application.c"
 }
 
 
 static void
-___lambda10__gtk_button_clicked (GtkButton* _sender,
-                                 gpointer self)
+___lambda10__webkit_web_view_load_changed (WebKitWebView* _sender,
+                                           WebKitLoadEvent load_event,
+                                           gpointer self)
 {
-#line 148 "/home/charalabos/hartes/src/Application.vala"
+#line 154 "/home/charalabos/hartes/src/Application.vala"
 	__lambda10_ (self);
-#line 577 "Application.c"
+#line 580 "Application.c"
 }
 
 
 static void
 __lambda11_ (Block1Data* _data1_)
+{
+	DiveApplication* self;
+	const gchar* _tmp0_;
+	const gchar* _tmp1_;
+#line 158 "/home/charalabos/hartes/src/Application.vala"
+	self = _data1_->self;
+#line 159 "/home/charalabos/hartes/src/Application.vala"
+	_tmp0_ = gtk_entry_get_text (_data1_->searchbar);
+#line 159 "/home/charalabos/hartes/src/Application.vala"
+	_tmp1_ = _tmp0_;
+#line 159 "/home/charalabos/hartes/src/Application.vala"
+	webkit_web_view_load_uri (_data1_->browser, _tmp1_);
+#line 598 "Application.c"
+}
+
+
+static void
+___lambda11__gtk_entry_activate (GtkEntry* _sender,
+                                 gpointer self)
+{
+#line 158 "/home/charalabos/hartes/src/Application.vala"
+	__lambda11_ (self);
+#line 608 "Application.c"
+}
+
+
+static void
+__lambda12_ (Block1Data* _data1_)
+{
+	DiveApplication* self;
+#line 162 "/home/charalabos/hartes/src/Application.vala"
+	self = _data1_->self;
+#line 163 "/home/charalabos/hartes/src/Application.vala"
+	webkit_web_view_go_back (_data1_->browser);
+#line 620 "Application.c"
+}
+
+
+static void
+___lambda12__gtk_button_clicked (GtkButton* _sender,
+                                 gpointer self)
+{
+#line 162 "/home/charalabos/hartes/src/Application.vala"
+	__lambda12_ (self);
+#line 630 "Application.c"
+}
+
+
+static void
+__lambda13_ (Block1Data* _data1_)
+{
+	DiveApplication* self;
+#line 166 "/home/charalabos/hartes/src/Application.vala"
+	self = _data1_->self;
+#line 167 "/home/charalabos/hartes/src/Application.vala"
+	webkit_web_view_go_forward (_data1_->browser);
+#line 642 "Application.c"
+}
+
+
+static void
+___lambda13__gtk_button_clicked (GtkButton* _sender,
+                                 gpointer self)
+{
+#line 166 "/home/charalabos/hartes/src/Application.vala"
+	__lambda13_ (self);
+#line 652 "Application.c"
+}
+
+
+static void
+__lambda14_ (Block1Data* _data1_)
 {
 	DiveApplication* self;
 	gint width = 0;
@@ -593,45 +666,45 @@ __lambda11_ (Block1Data* _data1_)
 	gint _tmp3_ = 0;
 	const gchar* _tmp4_;
 	const gchar* _tmp5_;
-#line 157 "/home/charalabos/hartes/src/Application.vala"
+#line 175 "/home/charalabos/hartes/src/Application.vala"
 	self = _data1_->self;
-#line 159 "/home/charalabos/hartes/src/Application.vala"
+#line 177 "/home/charalabos/hartes/src/Application.vala"
 	gtk_window_get_position ((GtkWindow*) _data1_->window, &_tmp0_, &_tmp1_);
-#line 159 "/home/charalabos/hartes/src/Application.vala"
+#line 177 "/home/charalabos/hartes/src/Application.vala"
 	x = _tmp0_;
-#line 159 "/home/charalabos/hartes/src/Application.vala"
+#line 177 "/home/charalabos/hartes/src/Application.vala"
 	y = _tmp1_;
-#line 160 "/home/charalabos/hartes/src/Application.vala"
+#line 178 "/home/charalabos/hartes/src/Application.vala"
 	gtk_window_get_size ((GtkWindow*) _data1_->window, &_tmp2_, &_tmp3_);
-#line 160 "/home/charalabos/hartes/src/Application.vala"
+#line 178 "/home/charalabos/hartes/src/Application.vala"
 	width = _tmp2_;
-#line 160 "/home/charalabos/hartes/src/Application.vala"
+#line 178 "/home/charalabos/hartes/src/Application.vala"
 	height = _tmp3_;
-#line 161 "/home/charalabos/hartes/src/Application.vala"
+#line 179 "/home/charalabos/hartes/src/Application.vala"
 	g_settings_set_int (_data1_->settings, "window-width", width);
-#line 162 "/home/charalabos/hartes/src/Application.vala"
+#line 180 "/home/charalabos/hartes/src/Application.vala"
 	g_settings_set_int (_data1_->settings, "window-height", height);
-#line 163 "/home/charalabos/hartes/src/Application.vala"
+#line 181 "/home/charalabos/hartes/src/Application.vala"
 	g_settings_set_int (_data1_->settings, "pos-x", x);
-#line 164 "/home/charalabos/hartes/src/Application.vala"
+#line 182 "/home/charalabos/hartes/src/Application.vala"
 	g_settings_set_int (_data1_->settings, "pos-y", y);
-#line 165 "/home/charalabos/hartes/src/Application.vala"
+#line 183 "/home/charalabos/hartes/src/Application.vala"
 	_tmp4_ = gtk_entry_get_text (_data1_->start_page_entry);
-#line 165 "/home/charalabos/hartes/src/Application.vala"
+#line 183 "/home/charalabos/hartes/src/Application.vala"
 	_tmp5_ = _tmp4_;
-#line 165 "/home/charalabos/hartes/src/Application.vala"
+#line 183 "/home/charalabos/hartes/src/Application.vala"
 	g_settings_set_string (_data1_->settings, "default-page", _tmp5_);
-#line 623 "Application.c"
+#line 698 "Application.c"
 }
 
 
 static void
-___lambda11__gtk_button_clicked (GtkButton* _sender,
+___lambda14__gtk_button_clicked (GtkButton* _sender,
                                  gpointer self)
 {
-#line 157 "/home/charalabos/hartes/src/Application.vala"
-	__lambda11_ (self);
-#line 633 "Application.c"
+#line 175 "/home/charalabos/hartes/src/Application.vala"
+	__lambda14_ (self);
+#line 708 "Application.c"
 }
 
 
@@ -676,14 +749,20 @@ dive_application_real_activate (GApplication* base)
 	GtkLabel* _tmp19_;
 	GtkButton* default_page_set_current = NULL;
 	GtkButton* _tmp20_;
-	gchar* _tmp21_;
-	gchar* _tmp22_;
-	const gchar* _tmp23_;
-	const gchar* _tmp24_;
+	GtkButton* set_google_default_button = NULL;
+	GtkButton* _tmp21_;
+	GtkButton* set_yahoo_default_button = NULL;
+	GtkButton* _tmp22_;
+	GtkButton* set_duck_default_button = NULL;
+	GtkButton* _tmp23_;
+	gchar* _tmp24_;
+	gchar* _tmp25_;
+	const gchar* _tmp26_;
+	const gchar* _tmp27_;
 	welcomeview* wv = NULL;
-	welcomeview* _tmp25_;
+	welcomeview* _tmp28_;
 	GtkWindow* welcomemessage = NULL;
-	GtkWindow* _tmp26_;
+	GtkWindow* _tmp29_;
 #line 68 "/home/charalabos/hartes/src/Application.vala"
 	self = (DiveApplication*) base;
 #line 68 "/home/charalabos/hartes/src/Application.vala"
@@ -810,110 +889,146 @@ dive_application_real_activate (GApplication* base)
 	g_object_ref_sink (_tmp20_);
 #line 88 "/home/charalabos/hartes/src/Application.vala"
 	default_page_set_current = _tmp20_;
+#line 89 "/home/charalabos/hartes/src/Application.vala"
+	_tmp21_ = (GtkButton*) gtk_button_new_with_label ("Set Google as default");
+#line 89 "/home/charalabos/hartes/src/Application.vala"
+	g_object_ref_sink (_tmp21_);
+#line 89 "/home/charalabos/hartes/src/Application.vala"
+	set_google_default_button = _tmp21_;
 #line 90 "/home/charalabos/hartes/src/Application.vala"
+	_tmp22_ = (GtkButton*) gtk_button_new_with_label ("Set Yahoo as default");
+#line 90 "/home/charalabos/hartes/src/Application.vala"
+	g_object_ref_sink (_tmp22_);
+#line 90 "/home/charalabos/hartes/src/Application.vala"
+	set_yahoo_default_button = _tmp22_;
+#line 91 "/home/charalabos/hartes/src/Application.vala"
+	_tmp23_ = (GtkButton*) gtk_button_new_with_label ("Set DuckDuckGo as default");
+#line 91 "/home/charalabos/hartes/src/Application.vala"
+	g_object_ref_sink (_tmp23_);
+#line 91 "/home/charalabos/hartes/src/Application.vala"
+	set_duck_default_button = _tmp23_;
+#line 93 "/home/charalabos/hartes/src/Application.vala"
 	g_signal_connect_data (default_page_set_current, "clicked", (GCallback) ___lambda5__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
-#line 94 "/home/charalabos/hartes/src/Application.vala"
-	_tmp21_ = g_settings_get_string (_data1_->settings, "default-page");
-#line 94 "/home/charalabos/hartes/src/Application.vala"
-	_tmp22_ = _tmp21_;
-#line 94 "/home/charalabos/hartes/src/Application.vala"
-	gtk_entry_set_text (_data1_->start_page_entry, _tmp22_);
-#line 94 "/home/charalabos/hartes/src/Application.vala"
-	_g_free0 (_tmp22_);
-#line 96 "/home/charalabos/hartes/src/Application.vala"
-	gtk_window_move ((GtkWindow*) _data1_->window, g_settings_get_int (_data1_->settings, "pos-x"), g_settings_get_int (_data1_->settings, "pos-y"));
 #line 97 "/home/charalabos/hartes/src/Application.vala"
-	gtk_window_resize ((GtkWindow*) _data1_->window, g_settings_get_int (_data1_->settings, "window-width"), g_settings_get_int (_data1_->settings, "window-height"));
-#line 99 "/home/charalabos/hartes/src/Application.vala"
-	gtk_grid_attach (custom_title_grid, (GtkWidget*) _data1_->searchbar, 0, 0, 1, 1);
-#line 100 "/home/charalabos/hartes/src/Application.vala"
-	gtk_grid_attach_next_to (custom_title_grid, (GtkWidget*) reload, (GtkWidget*) _data1_->searchbar, GTK_POS_RIGHT, 1, 1);
+	g_signal_connect_data (set_google_default_button, "clicked", (GCallback) ___lambda6__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
 #line 101 "/home/charalabos/hartes/src/Application.vala"
-	gtk_grid_attach_next_to (custom_title_grid, (GtkWidget*) main_grid, (GtkWidget*) _data1_->searchbar, GTK_POS_LEFT, 1, 1);
-#line 103 "/home/charalabos/hartes/src/Application.vala"
-	_tmp23_ = gtk_entry_get_text (_data1_->start_page_entry);
-#line 103 "/home/charalabos/hartes/src/Application.vala"
-	_tmp24_ = _tmp23_;
-#line 103 "/home/charalabos/hartes/src/Application.vala"
-	webkit_web_view_load_uri (_data1_->browser, _tmp24_);
+	g_signal_connect_data (set_yahoo_default_button, "clicked", (GCallback) ___lambda7__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
 #line 105 "/home/charalabos/hartes/src/Application.vala"
-	gtk_grid_attach (settings_section, (GtkWidget*) mode_switch, 0, 0, 10, 10);
-#line 106 "/home/charalabos/hartes/src/Application.vala"
-	gtk_grid_attach_next_to (settings_section, (GtkWidget*) dark_mode_label, (GtkWidget*) mode_switch, GTK_POS_LEFT, 10, 10);
-#line 107 "/home/charalabos/hartes/src/Application.vala"
-	gtk_grid_attach_next_to (settings_section, (GtkWidget*) _data1_->start_page_entry, (GtkWidget*) mode_switch, GTK_POS_BOTTOM, 10, 10);
-#line 108 "/home/charalabos/hartes/src/Application.vala"
-	gtk_grid_attach_next_to (settings_section, (GtkWidget*) default_page_set_current, (GtkWidget*) _data1_->start_page_entry, GTK_POS_BOTTOM, 10, 10);
+	g_signal_connect_data (set_duck_default_button, "clicked", (GCallback) ___lambda8__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
 #line 109 "/home/charalabos/hartes/src/Application.vala"
-	gtk_grid_attach_next_to (settings_section, (GtkWidget*) save_button, (GtkWidget*) default_page_set_current, GTK_POS_BOTTOM, 10, 10);
-#line 110 "/home/charalabos/hartes/src/Application.vala"
-	gtk_grid_attach_next_to (settings_section, (GtkWidget*) start_page_label, (GtkWidget*) _data1_->start_page_entry, GTK_POS_LEFT, 10, 10);
+	_tmp24_ = g_settings_get_string (_data1_->settings, "default-page");
+#line 109 "/home/charalabos/hartes/src/Application.vala"
+	_tmp25_ = _tmp24_;
+#line 109 "/home/charalabos/hartes/src/Application.vala"
+	gtk_entry_set_text (_data1_->start_page_entry, _tmp25_);
+#line 109 "/home/charalabos/hartes/src/Application.vala"
+	_g_free0 (_tmp25_);
+#line 111 "/home/charalabos/hartes/src/Application.vala"
+	gtk_window_move ((GtkWindow*) _data1_->window, g_settings_get_int (_data1_->settings, "pos-x"), g_settings_get_int (_data1_->settings, "pos-y"));
 #line 112 "/home/charalabos/hartes/src/Application.vala"
-	gtk_stack_switcher_set_stack (switcher, stack);
-#line 113 "/home/charalabos/hartes/src/Application.vala"
-	g_object_set ((GtkWidget*) stack, "expand", TRUE, NULL);
+	gtk_window_resize ((GtkWindow*) _data1_->window, g_settings_get_int (_data1_->settings, "window-width"), g_settings_get_int (_data1_->settings, "window-height"));
 #line 114 "/home/charalabos/hartes/src/Application.vala"
-	gtk_stack_add_titled (stack, (GtkWidget*) _data1_->browser, "browser_section_stacked", "Browser");
+	gtk_grid_attach (custom_title_grid, (GtkWidget*) _data1_->searchbar, 0, 0, 1, 1);
 #line 115 "/home/charalabos/hartes/src/Application.vala"
-	gtk_stack_add_titled (stack, (GtkWidget*) settings_section, "settings_section_stacked", "Settings");
-#line 117 "/home/charalabos/hartes/src/Application.vala"
-	g_object_bind_property_with_closures ((GObject*) mode_switch, "active", (GObject*) gtk_settings, "gtk_application_prefer_dark_theme", G_BINDING_DEFAULT, (GClosure*) ((NULL == NULL) ? NULL : g_cclosure_new ((GCallback) NULL, NULL, (GClosureNotify) NULL)), (GClosure*) ((NULL == NULL) ? NULL : g_cclosure_new ((GCallback) NULL, NULL, (GClosureNotify) NULL)));
-#line 119 "/home/charalabos/hartes/src/Application.vala"
-	_tmp25_ = welcomeview_new ();
-#line 119 "/home/charalabos/hartes/src/Application.vala"
-	g_object_ref_sink (_tmp25_);
-#line 119 "/home/charalabos/hartes/src/Application.vala"
-	wv = _tmp25_;
+	gtk_grid_attach_next_to (custom_title_grid, (GtkWidget*) reload, (GtkWidget*) _data1_->searchbar, GTK_POS_RIGHT, 1, 1);
+#line 116 "/home/charalabos/hartes/src/Application.vala"
+	gtk_grid_attach_next_to (custom_title_grid, (GtkWidget*) main_grid, (GtkWidget*) _data1_->searchbar, GTK_POS_LEFT, 1, 1);
+#line 118 "/home/charalabos/hartes/src/Application.vala"
+	_tmp26_ = gtk_entry_get_text (_data1_->start_page_entry);
+#line 118 "/home/charalabos/hartes/src/Application.vala"
+	_tmp27_ = _tmp26_;
+#line 118 "/home/charalabos/hartes/src/Application.vala"
+	webkit_web_view_load_uri (_data1_->browser, _tmp27_);
+#line 120 "/home/charalabos/hartes/src/Application.vala"
+	gtk_grid_attach (settings_section, (GtkWidget*) mode_switch, 0, 0, 10, 10);
 #line 121 "/home/charalabos/hartes/src/Application.vala"
-	_tmp26_ = (GtkWindow*) gtk_window_new (GTK_WINDOW_TOPLEVEL);
-#line 121 "/home/charalabos/hartes/src/Application.vala"
-	g_object_ref_sink (_tmp26_);
-#line 121 "/home/charalabos/hartes/src/Application.vala"
-	welcomemessage = _tmp26_;
+	gtk_grid_attach_next_to (settings_section, (GtkWidget*) dark_mode_label, (GtkWidget*) mode_switch, GTK_POS_LEFT, 10, 10);
+#line 122 "/home/charalabos/hartes/src/Application.vala"
+	gtk_grid_attach_next_to (settings_section, (GtkWidget*) _data1_->start_page_entry, (GtkWidget*) mode_switch, GTK_POS_BOTTOM, 10, 10);
 #line 123 "/home/charalabos/hartes/src/Application.vala"
-	gtk_container_add ((GtkContainer*) welcomemessage, (GtkWidget*) wv);
+	gtk_grid_attach_next_to (settings_section, (GtkWidget*) default_page_set_current, (GtkWidget*) _data1_->start_page_entry, GTK_POS_BOTTOM, 10, 10);
 #line 124 "/home/charalabos/hartes/src/Application.vala"
-	gtk_window_set_title (welcomemessage, "About");
+	gtk_grid_attach_next_to (settings_section, (GtkWidget*) save_button, (GtkWidget*) default_page_set_current, GTK_POS_BOTTOM, 10, 10);
+#line 125 "/home/charalabos/hartes/src/Application.vala"
+	gtk_grid_attach_next_to (settings_section, (GtkWidget*) set_google_default_button, (GtkWidget*) save_button, GTK_POS_BOTTOM, 10, 10);
 #line 126 "/home/charalabos/hartes/src/Application.vala"
-	gtk_grid_attach (main_grid, (GtkWidget*) back, 0, 0, 1, 1);
+	gtk_grid_attach_next_to (settings_section, (GtkWidget*) set_yahoo_default_button, (GtkWidget*) set_google_default_button, GTK_POS_BOTTOM, 10, 10);
 #line 127 "/home/charalabos/hartes/src/Application.vala"
-	gtk_grid_attach_next_to (main_grid, (GtkWidget*) forward, (GtkWidget*) back, GTK_POS_RIGHT, 1, 1);
-#line 129 "/home/charalabos/hartes/src/Application.vala"
-	g_signal_connect_data (reload, "clicked", (GCallback) ___lambda6__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
+	gtk_grid_attach_next_to (settings_section, (GtkWidget*) set_duck_default_button, (GtkWidget*) set_yahoo_default_button, GTK_POS_BOTTOM, 10, 10);
+#line 128 "/home/charalabos/hartes/src/Application.vala"
+	gtk_grid_attach_next_to (settings_section, (GtkWidget*) start_page_label, (GtkWidget*) _data1_->start_page_entry, GTK_POS_LEFT, 10, 10);
+#line 130 "/home/charalabos/hartes/src/Application.vala"
+	gtk_stack_switcher_set_stack (switcher, stack);
+#line 131 "/home/charalabos/hartes/src/Application.vala"
+	g_object_set ((GtkWidget*) stack, "expand", TRUE, NULL);
+#line 132 "/home/charalabos/hartes/src/Application.vala"
+	gtk_stack_add_titled (stack, (GtkWidget*) _data1_->browser, "browser_section_stacked", "Browser");
 #line 133 "/home/charalabos/hartes/src/Application.vala"
-	gtk_widget_set_valign ((GtkWidget*) _data1_->searchbar, GTK_ALIGN_CENTER);
-#line 134 "/home/charalabos/hartes/src/Application.vala"
-	gtk_widget_set_size_request ((GtkWidget*) _data1_->searchbar, 900, 10);
-#line 136 "/home/charalabos/hartes/src/Application.vala"
-	g_signal_connect_data (_data1_->browser, "load-changed", (GCallback) ___lambda7__webkit_web_view_load_changed, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
-#line 140 "/home/charalabos/hartes/src/Application.vala"
-	g_signal_connect_data (_data1_->searchbar, "activate", (GCallback) ___lambda8__gtk_entry_activate, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
+	gtk_stack_add_titled (stack, (GtkWidget*) settings_section, "settings_section_stacked", "Settings");
+#line 135 "/home/charalabos/hartes/src/Application.vala"
+	g_object_bind_property_with_closures ((GObject*) mode_switch, "active", (GObject*) gtk_settings, "gtk_application_prefer_dark_theme", G_BINDING_DEFAULT, (GClosure*) ((NULL == NULL) ? NULL : g_cclosure_new ((GCallback) NULL, NULL, (GClosureNotify) NULL)), (GClosure*) ((NULL == NULL) ? NULL : g_cclosure_new ((GCallback) NULL, NULL, (GClosureNotify) NULL)));
+#line 137 "/home/charalabos/hartes/src/Application.vala"
+	_tmp28_ = welcomeview_new ();
+#line 137 "/home/charalabos/hartes/src/Application.vala"
+	g_object_ref_sink (_tmp28_);
+#line 137 "/home/charalabos/hartes/src/Application.vala"
+	wv = _tmp28_;
+#line 139 "/home/charalabos/hartes/src/Application.vala"
+	_tmp29_ = (GtkWindow*) gtk_window_new (GTK_WINDOW_TOPLEVEL);
+#line 139 "/home/charalabos/hartes/src/Application.vala"
+	g_object_ref_sink (_tmp29_);
+#line 139 "/home/charalabos/hartes/src/Application.vala"
+	welcomemessage = _tmp29_;
+#line 141 "/home/charalabos/hartes/src/Application.vala"
+	gtk_container_add ((GtkContainer*) welcomemessage, (GtkWidget*) wv);
+#line 142 "/home/charalabos/hartes/src/Application.vala"
+	gtk_window_set_title (welcomemessage, "About");
 #line 144 "/home/charalabos/hartes/src/Application.vala"
-	g_signal_connect_data (back, "clicked", (GCallback) ___lambda9__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
-#line 148 "/home/charalabos/hartes/src/Application.vala"
-	g_signal_connect_data (forward, "clicked", (GCallback) ___lambda10__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
+	gtk_grid_attach (main_grid, (GtkWidget*) back, 0, 0, 1, 1);
+#line 145 "/home/charalabos/hartes/src/Application.vala"
+	gtk_grid_attach_next_to (main_grid, (GtkWidget*) forward, (GtkWidget*) back, GTK_POS_RIGHT, 1, 1);
+#line 147 "/home/charalabos/hartes/src/Application.vala"
+	g_signal_connect_data (reload, "clicked", (GCallback) ___lambda9__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
+#line 151 "/home/charalabos/hartes/src/Application.vala"
+	gtk_widget_set_valign ((GtkWidget*) _data1_->searchbar, GTK_ALIGN_CENTER);
 #line 152 "/home/charalabos/hartes/src/Application.vala"
-	gtk_header_bar_set_show_close_button (headerbar, TRUE);
-#line 153 "/home/charalabos/hartes/src/Application.vala"
-	gtk_header_bar_set_custom_title (headerbar, (GtkWidget*) custom_title_grid);
+	gtk_widget_set_size_request ((GtkWidget*) _data1_->searchbar, 900, 10);
 #line 154 "/home/charalabos/hartes/src/Application.vala"
-	gtk_header_bar_pack_end (headerbar, (GtkWidget*) switcher);
-#line 155 "/home/charalabos/hartes/src/Application.vala"
-	gtk_window_set_titlebar ((GtkWindow*) _data1_->window, (GtkWidget*) headerbar);
-#line 157 "/home/charalabos/hartes/src/Application.vala"
-	g_signal_connect_data (save_button, "clicked", (GCallback) ___lambda11__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
-#line 168 "/home/charalabos/hartes/src/Application.vala"
-	gtk_window_set_default_size ((GtkWindow*) _data1_->window, 900, 640);
-#line 169 "/home/charalabos/hartes/src/Application.vala"
-	gtk_container_add ((GtkContainer*) _data1_->window, (GtkWidget*) stack);
+	g_signal_connect_data (_data1_->browser, "load-changed", (GCallback) ___lambda10__webkit_web_view_load_changed, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
+#line 158 "/home/charalabos/hartes/src/Application.vala"
+	g_signal_connect_data (_data1_->searchbar, "activate", (GCallback) ___lambda11__gtk_entry_activate, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
+#line 162 "/home/charalabos/hartes/src/Application.vala"
+	g_signal_connect_data (back, "clicked", (GCallback) ___lambda12__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
+#line 166 "/home/charalabos/hartes/src/Application.vala"
+	g_signal_connect_data (forward, "clicked", (GCallback) ___lambda13__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
 #line 170 "/home/charalabos/hartes/src/Application.vala"
-	gtk_widget_show_all ((GtkWidget*) _data1_->window);
+	gtk_header_bar_set_show_close_button (headerbar, TRUE);
 #line 171 "/home/charalabos/hartes/src/Application.vala"
+	gtk_header_bar_set_custom_title (headerbar, (GtkWidget*) custom_title_grid);
+#line 172 "/home/charalabos/hartes/src/Application.vala"
+	gtk_header_bar_pack_end (headerbar, (GtkWidget*) switcher);
+#line 173 "/home/charalabos/hartes/src/Application.vala"
+	gtk_window_set_titlebar ((GtkWindow*) _data1_->window, (GtkWidget*) headerbar);
+#line 175 "/home/charalabos/hartes/src/Application.vala"
+	g_signal_connect_data (save_button, "clicked", (GCallback) ___lambda14__gtk_button_clicked, block1_data_ref (_data1_), (GClosureNotify) block1_data_unref, 0);
+#line 186 "/home/charalabos/hartes/src/Application.vala"
+	gtk_window_set_default_size ((GtkWindow*) _data1_->window, 900, 640);
+#line 187 "/home/charalabos/hartes/src/Application.vala"
+	gtk_container_add ((GtkContainer*) _data1_->window, (GtkWidget*) stack);
+#line 188 "/home/charalabos/hartes/src/Application.vala"
+	gtk_widget_show_all ((GtkWidget*) _data1_->window);
+#line 189 "/home/charalabos/hartes/src/Application.vala"
 	gtk_widget_show_all ((GtkWidget*) welcomemessage);
 #line 68 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (welcomemessage);
 #line 68 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (wv);
+#line 68 "/home/charalabos/hartes/src/Application.vala"
+	_g_object_unref0 (set_duck_default_button);
+#line 68 "/home/charalabos/hartes/src/Application.vala"
+	_g_object_unref0 (set_yahoo_default_button);
+#line 68 "/home/charalabos/hartes/src/Application.vala"
+	_g_object_unref0 (set_google_default_button);
 #line 68 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (default_page_set_current);
 #line 68 "/home/charalabos/hartes/src/Application.vala"
@@ -948,7 +1063,7 @@ dive_application_real_activate (GApplication* base)
 	block1_data_unref (_data1_);
 #line 68 "/home/charalabos/hartes/src/Application.vala"
 	_data1_ = NULL;
-#line 950 "Application.c"
+#line 1067 "Application.c"
 }
 
 
@@ -959,17 +1074,17 @@ dive_application_main (gchar** args,
 	gint result = 0;
 	DiveApplication* app = NULL;
 	DiveApplication* _tmp0_;
-#line 175 "/home/charalabos/hartes/src/Application.vala"
+#line 193 "/home/charalabos/hartes/src/Application.vala"
 	_tmp0_ = dive_application_new ();
-#line 175 "/home/charalabos/hartes/src/Application.vala"
+#line 193 "/home/charalabos/hartes/src/Application.vala"
 	app = _tmp0_;
-#line 176 "/home/charalabos/hartes/src/Application.vala"
+#line 194 "/home/charalabos/hartes/src/Application.vala"
 	result = granite_application_run ((GraniteApplication*) app, args, args_length1);
-#line 176 "/home/charalabos/hartes/src/Application.vala"
+#line 194 "/home/charalabos/hartes/src/Application.vala"
 	_g_object_unref0 (app);
-#line 176 "/home/charalabos/hartes/src/Application.vala"
+#line 194 "/home/charalabos/hartes/src/Application.vala"
 	return result;
-#line 971 "Application.c"
+#line 1088 "Application.c"
 }
 
 
@@ -977,9 +1092,9 @@ int
 main (int argc,
       char ** argv)
 {
-#line 174 "/home/charalabos/hartes/src/Application.vala"
+#line 192 "/home/charalabos/hartes/src/Application.vala"
 	return dive_application_main (argv, argc);
-#line 981 "Application.c"
+#line 1098 "Application.c"
 }
 
 
@@ -990,7 +1105,7 @@ dive_application_class_init (DiveApplicationClass * klass)
 	dive_application_parent_class = g_type_class_peek_parent (klass);
 #line 57 "/home/charalabos/hartes/src/Application.vala"
 	((GApplicationClass *) klass)->activate = (void (*) (GApplication*)) dive_application_real_activate;
-#line 992 "Application.c"
+#line 1109 "Application.c"
 }
 
 

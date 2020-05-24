@@ -25,7 +25,7 @@ using WebKit;
 
 public class welcomeview : Gtk.Grid {
     construct {
-        var welcome = new Granite.Widgets.Welcome ("Deep Dive", "This is a simple web browser.\nChanges: Save settings button to\nsave all changed settings added");
+        var welcome = new Granite.Widgets.Welcome ("Deep Dive", "This is a simple web browser.");
 
         add (welcome);
 
@@ -86,9 +86,24 @@ namespace Dive {
             var start_page_entry = new Gtk.Entry ();
             var start_page_label = new Gtk.Label ("Default page: ");
             var default_page_set_current = new Gtk.Button.with_label ("Set current page as default");
+            var set_google_default_button = new Gtk.Button.with_label ("Set Google as default");
+            var set_yahoo_default_button = new Gtk.Button.with_label ("Set Yahoo as default");
+            var set_duck_default_button = new Gtk.Button.with_label ("Set DuckDuckGo as default");
 
             default_page_set_current.clicked.connect (() => {
                 start_page_entry.text = browser.get_uri ();
+            });
+
+            set_google_default_button.clicked.connect (() => {
+                start_page_entry.set_text ("https://google.com");
+            });
+
+            set_yahoo_default_button.clicked.connect (() => {
+                start_page_entry.set_text ("https://yahoo.com");
+            });
+
+            set_duck_default_button.clicked.connect (() => {
+                start_page_entry.set_text ("https://duckduckgo.com/");
             });
 
             start_page_entry.set_text (settings.get_string("default-page"));
@@ -107,6 +122,9 @@ namespace Dive {
             settings_section.attach_next_to (start_page_entry, mode_switch, Gtk.PositionType.BOTTOM, 10, 10);
             settings_section.attach_next_to (default_page_set_current, start_page_entry, Gtk.PositionType.BOTTOM, 10, 10);
             settings_section.attach_next_to (save_button, default_page_set_current, Gtk.PositionType.BOTTOM, 10, 10);
+            settings_section.attach_next_to (set_google_default_button, save_button, Gtk.PositionType.BOTTOM, 10, 10);
+            settings_section.attach_next_to (set_yahoo_default_button, set_google_default_button, Gtk.PositionType.BOTTOM, 10, 10);
+            settings_section.attach_next_to (set_duck_default_button, set_yahoo_default_button, Gtk.PositionType.BOTTOM, 10, 10);
             settings_section.attach_next_to (start_page_label, start_page_entry, Gtk.PositionType.LEFT, 10, 10);
 
             switcher.stack = stack;

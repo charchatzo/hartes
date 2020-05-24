@@ -8,17 +8,3 @@
 /usr/local/share/icons/hicolor/128x128@2/apps/com.github.deep-dive.svg
 /usr/local/share/icons/hicolor/256x256/apps/com.github.deep-dive.svg
 /usr/local/share/icons/hicolor/256x256@2/apps/com.github.deep-dive.svg
-/usr/local/share/icons/hicolor/256x256@2/apps
-/usr/local/share/icons/hicolor/256x256@2
-/usr/local/share/icons/hicolor/256x256/apps
-/usr/local/share/icons/hicolor/256x256
-/usr/local/share/icons/hicolor/128x128@2/apps
-/usr/local/share/icons/hicolor/128x128@2
-/usr/local/share/icons/hicolor/128x128/apps
-/usr/local/share/icons/hicolor/128x128
-/usr/local/share/icons/hicolor
-/usr/local/share/icons
-/usr/local/share/glib-2.0/schemas
-/usr/local/share/glib-2.0
-/usr/local/share/metainfo
-/usr/local/share/applications
