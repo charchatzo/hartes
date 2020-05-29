@@ -89,6 +89,16 @@ namespace Dive {
             var set_google_default_button = new Gtk.Button.with_label ("Set Google as default");
             var set_yahoo_default_button = new Gtk.Button.with_label ("Set Yahoo as default");
             var set_duck_default_button = new Gtk.Button.with_label ("Set DuckDuckGo as default");
+            var text_tag_table = new Gtk.TextTagTable ();
+            var text_buffer = new Gtk.TextBuffer (text_tag_table);
+            var text_view = new Gtk.TextView.with_buffer (text_buffer);
+            var save_notes = new Gtk.Button.with_label ("Save notes");
+
+            text_buffer.text = settings.get_string ("notes");
+
+            save_notes.clicked.connect (() => {
+                settings.set_string ("notes", text_buffer.text);
+            });
 
             default_page_set_current.clicked.connect (() => {
                 start_page_entry.text = browser.get_uri ();
@@ -131,6 +141,7 @@ namespace Dive {
             stack.expand = true;
             stack.add_titled (browser, "browser_section_stacked", "Browser");
             stack.add_titled (settings_section, "settings_section_stacked", "Settings");
+            stack.add_titled (text_view, "text_view_section_stacked", "Notes");
 
             mode_switch.bind_property ("active", gtk_settings, "gtk_application_prefer_dark_theme");
 
@@ -149,7 +160,7 @@ namespace Dive {
             });
 
             searchbar.valign = Gtk.Align.CENTER;
-            searchbar.set_size_request (900, 10);
+            searchbar.set_size_request (500, 10);
 
             browser.load_changed.connect (() => {
                 searchbar.set_text (browser.uri);
@@ -170,6 +181,7 @@ namespace Dive {
             headerbar.set_show_close_button (true);
             headerbar.set_custom_title (custom_title_grid);
             headerbar.pack_end (switcher);
+            headerbar.pack_start (save_notes);
             window.set_titlebar (headerbar);
 
             save_button.clicked.connect (() => {

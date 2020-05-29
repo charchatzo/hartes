@@ -33,6 +33,7 @@ dependencies = [
     dependency('granite'),
     dependency('webkit2gtk-4.0'),
     dependency('cairo'),
+    dependency('vte-2.91'),
 ]
 
 # Adds subfolders specific build system
