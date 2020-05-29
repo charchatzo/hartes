@@ -1,5 +1,5 @@
 /*
-* Copyright (c) {{yearrange}} charalabos ()
+* Copyright (c) 2020 charalabos (charchatzo2008@gmail.com)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -16,7 +16,7 @@
 * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 * Boston, MA 02110-1301 USA
 *
-* Authored by: charalabos <>
+* Authored by: charalabos <charchatzo2008@gmail.com>
 */
 using Granite;
 using Granite.Widgets;
@@ -51,10 +51,36 @@ public class welcomeview : Gtk.Grid {
         });
     }
 }
+public class save_file_error_message : Gtk.Grid {
+    construct {
+        var message = new Granite.Widgets.Welcome ("Error", "The file will be overwritten");
 
+        add (message);
 
+        message.activated.connect ((index) => {
+            switch (index) {
+                case 0:
+                    try {
+                        AppInfo.launch_default_for_uri ("https://valadoc.org/granite/Granite.html", null);
+                    } catch (Error e) {
+                        warning (e.message);
+                    }
+
+                    break;
+                case 1:
+                    try {
+                        AppInfo.launch_default_for_uri ("https://github.com/elementary/granite", null);
+                    } catch (Error e) {
+                        warning (e.message);
+                    }
+
+                    break;
+            }
+        });
+    }
+}
 namespace Dive {
-    public class Application : Granite.Application {
+    public class Application : Gtk.Application {
 
         public Application () {
             Object(
@@ -92,12 +118,36 @@ namespace Dive {
             var text_tag_table = new Gtk.TextTagTable ();
             var text_buffer = new Gtk.TextBuffer (text_tag_table);
             var text_view = new Gtk.TextView.with_buffer (text_buffer);
-            var save_notes = new Gtk.Button.with_label ("Save notes");
+            var save_notes_to_file = new Gtk.Button.with_label ("Save notes to file");
+            var save_notes_to_gschema = new Gtk.Button.with_label ("Save notes to gschema");
+            var save_notes_grid = new Gtk.Grid ();
+            var open_notes_from_gschema = new Gtk.Button.with_label ("Open notes from gschema");
+            var wv = new welcomeview ();
+            var welcomemessage = new Gtk.Window ();
 
-            text_buffer.text = settings.get_string ("notes");
+            open_notes_from_gschema.clicked.connect (() => {
+                text_buffer.text = settings.get_string ("notes");
+            });
 
-            save_notes.clicked.connect (() => {
-                settings.set_string ("notes", text_buffer.text);
+            save_notes_grid.attach (save_notes_to_file, 0, 0, 10, 10);
+            save_notes_grid.attach_next_to (save_notes_to_gschema, save_notes_to_file, Gtk.PositionType.RIGHT, 10, 10);
+
+            save_notes_to_gschema.clicked.connect (() => {
+               settings.set_string ("notes", text_buffer.text);
+            });
+
+            save_notes_to_file.clicked.connect (() => {
+                var file = File.new_for_path ("notes.txt");
+                if (file.query_exists ()) {
+                    var error_message = new save_file_error_message ();
+                    var error_message_window = new Gtk.Window ();
+                    error_message_window.add (error_message);
+                    error_message_window.set_title ("Error");
+                    error_message_window.show_all ();
+                    file.delete ();
+                }
+                var dos = new DataOutputStream (file.create (FileCreateFlags.REPLACE_DESTINATION));
+                dos.put_string (text_buffer.text);
             });
 
             default_page_set_current.clicked.connect (() => {
@@ -136,6 +186,7 @@ namespace Dive {
             settings_section.attach_next_to (set_yahoo_default_button, set_google_default_button, Gtk.PositionType.BOTTOM, 10, 10);
             settings_section.attach_next_to (set_duck_default_button, set_yahoo_default_button, Gtk.PositionType.BOTTOM, 10, 10);
             settings_section.attach_next_to (start_page_label, start_page_entry, Gtk.PositionType.LEFT, 10, 10);
+            settings_section.attach_next_to (open_notes_from_gschema, set_duck_default_button, Gtk.PositionType.BOTTOM  , 10 ,10);
 
             switcher.stack = stack;
             stack.expand = true;
@@ -144,10 +195,6 @@ namespace Dive {
             stack.add_titled (text_view, "text_view_section_stacked", "Notes");
 
             mode_switch.bind_property ("active", gtk_settings, "gtk_application_prefer_dark_theme");
-
-            var wv = new welcomeview ();
-
-            var welcomemessage = new Gtk.Window ();
 
             welcomemessage.add (wv);
             welcomemessage.set_title ("About");
@@ -160,7 +207,7 @@ namespace Dive {
             });
 
             searchbar.valign = Gtk.Align.CENTER;
-            searchbar.set_size_request (500, 10);
+            searchbar.set_size_request (350, 10);
 
             browser.load_changed.connect (() => {
                 searchbar.set_text (browser.uri);
@@ -181,7 +228,7 @@ namespace Dive {
             headerbar.set_show_close_button (true);
             headerbar.set_custom_title (custom_title_grid);
             headerbar.pack_end (switcher);
-            headerbar.pack_start (save_notes);
+            headerbar.pack_start (save_notes_grid);
             window.set_titlebar (headerbar);
 
             save_button.clicked.connect (() => {
