@@ -51,13 +51,13 @@ public class welcomeview : Gtk.Grid {
         });
     }
 }
-public class save_file_error_message : Gtk.Grid {
+public class save_notes_to_file_warning : Gtk.Grid {
     construct {
-        var message = new Granite.Widgets.Welcome ("Error", "The file will be overwritten");
+        var welcome = new Granite.Widgets.Welcome ("Warning!", "The file will be overwritten.");
 
-        add (message);
+        add (welcome);
 
-        message.activated.connect ((index) => {
+        welcome.activated.connect ((index) => {
             switch (index) {
                 case 0:
                     try {
@@ -122,8 +122,29 @@ namespace Dive {
             var save_notes_to_gschema = new Gtk.Button.with_label ("Save notes to gschema");
             var save_notes_grid = new Gtk.Grid ();
             var open_notes_from_gschema = new Gtk.Button.with_label ("Open notes from gschema");
-            var wv = new welcomeview ();
-            var welcomemessage = new Gtk.Window ();
+            var open_notes_from_file = new Gtk.Button.with_label ("Open notes from file");
+            var save_history_label = new Gtk.Label ("Save history:  ");
+            var save_history = new Gtk.Switch ();
+            var file_history = File.new_for_path (".deepdivehistory.txt");
+            if (file_history.query_exists ()) {
+                file_history.delete ();
+            }
+            var dos_history = new DataOutputStream (file_history.create (FileCreateFlags.REPLACE_DESTINATION));
+                
+            browser.load_changed.connect (() => {
+                searchbar.set_text (browser.uri);
+                dos_history.put_string (browser.uri + "\n");
+                window.set_title (browser.uri + " - Deep Dive");
+            });
+
+            open_notes_from_file.clicked.connect (() => {
+                var notes_file = File.new_for_path ("notes.txt");
+                var dis = new DataInputStream (notes_file.read());
+                string line;
+                while ((line = dis.read_line (null)) != null) {
+                    text_buffer.set_text (text_buffer.text + line + "\n");
+                }
+            });
 
             open_notes_from_gschema.clicked.connect (() => {
                 text_buffer.text = settings.get_string ("notes");
@@ -139,11 +160,11 @@ namespace Dive {
             save_notes_to_file.clicked.connect (() => {
                 var file = File.new_for_path ("notes.txt");
                 if (file.query_exists ()) {
-                    var error_message = new save_file_error_message ();
-                    var error_message_window = new Gtk.Window ();
-                    error_message_window.add (error_message);
-                    error_message_window.set_title ("Error");
-                    error_message_window.show_all ();
+                    var file_exists_warning = new save_notes_to_file_warning ();
+                    var file_exists_window = new Gtk.Window ();
+                    file_exists_window.set_title ("Warning!");
+                    file_exists_window.add (file_exists_warning);
+                    file_exists_window.show_all ();
                     file.delete ();
                 }
                 var dos = new DataOutputStream (file.create (FileCreateFlags.REPLACE_DESTINATION));
@@ -187,6 +208,7 @@ namespace Dive {
             settings_section.attach_next_to (set_duck_default_button, set_yahoo_default_button, Gtk.PositionType.BOTTOM, 10, 10);
             settings_section.attach_next_to (start_page_label, start_page_entry, Gtk.PositionType.LEFT, 10, 10);
             settings_section.attach_next_to (open_notes_from_gschema, set_duck_default_button, Gtk.PositionType.BOTTOM  , 10 ,10);
+            settings_section.attach_next_to (open_notes_from_file, open_notes_from_gschema, Gtk.PositionType.BOTTOM, 10, 10);
 
             switcher.stack = stack;
             stack.expand = true;
@@ -195,6 +217,10 @@ namespace Dive {
             stack.add_titled (text_view, "text_view_section_stacked", "Notes");
 
             mode_switch.bind_property ("active", gtk_settings, "gtk_application_prefer_dark_theme");
+
+            var wv = new welcomeview ();
+            var welcomemessage = new Gtk.Window ();
+
 
             welcomemessage.add (wv);
             welcomemessage.set_title ("About");
@@ -209,10 +235,6 @@ namespace Dive {
             searchbar.valign = Gtk.Align.CENTER;
             searchbar.set_size_request (350, 10);
 
-            browser.load_changed.connect (() => {
-                searchbar.set_text (browser.uri);
-            });
-
             searchbar.activate.connect (() => {
                 browser.load_uri (searchbar.text);
             });
@@ -224,6 +246,7 @@ namespace Dive {
             forward.clicked.connect (() => {
                 browser.go_forward ();
             });
+
 
             headerbar.set_show_close_button (true);
             headerbar.set_custom_title (custom_title_grid);
@@ -241,7 +264,7 @@ namespace Dive {
                 settings.set_int ("pos-y", y);
                 settings.set_string ("default-page", start_page_entry.text);
             });
-
+            
             window.set_default_size (900, 640);
             window.add (stack);
             window.show_all ();
