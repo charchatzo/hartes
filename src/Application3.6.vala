@@ -109,18 +109,7 @@ namespace Dive {
                     text_buffer.set_text (text_buffer.text + line + "\n");
                 }
             });
-            
-            window.set_default_size (900, 640);
-            window.add (stack);
-            window.show_all ();
-            welcomemessage.show_all ();
-        }
 
-        public static int main (string[] args) {
-            var app = new Dive.Application ();
-            return app.run (args);
-        }
-    }
             open_notes_from_gschema.clicked.connect (() => {
                 text_buffer.text = settings.get_string ("notes");
             });
