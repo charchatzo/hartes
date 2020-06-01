@@ -1,6 +1,0 @@
-# ninja log v5
-0	302	1591018197	com.github.deep-dive.desktop	77a826cca2c219c7
-0	307	1591018197	com.github.deep-dive.appdata.xml	24eb7cf2fa09bb07
-3	413	1591018197	com.github.deep-dive@exe/src/Application3.6.c	16cdae421b8ea9c0
-413	666	1591018197	com.github.deep-dive@exe/meson-generated_src_Application3.6.c.o	c72a1c7a0a06a3e1
-668	924	1591018197	com.github.deep-dive	99856d4eb59504d9

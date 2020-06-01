@@ -53,7 +53,7 @@ namespace Dive {
             var window = new Gtk.ApplicationWindow (this);
             var main_grid = new Gtk.Grid ();
             var headerbar = new Gtk.HeaderBar ();
-            var searchbar = new Gtk.Entry ();
+            var searchbar = new Gtk.SearchEntry ();
             var browser = new WebView ();
             var back = new Gtk.Button.from_icon_name ("go-previous-symbolic", Gtk.IconSize.BUTTON);
             var forward = new Gtk.Button.from_icon_name ("go-next-symbolic", Gtk.IconSize.BUTTON);
@@ -84,7 +84,7 @@ namespace Dive {
             var save_history_label = new Gtk.Label ("Save history:  ");
             var save_history = new Gtk.Switch ();
             var file_history = File.new_for_path (".deepdivehistory.txt");
-            var searchbar_second = new Gtk.Entry ();
+            var searchbar_second = new Gtk.SearchEntry ();
 
             searchbar_second.placeholder_text = "Search on the google.";
             searchbar_second.activate.connect (() => {
