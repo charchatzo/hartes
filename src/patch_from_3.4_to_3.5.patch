@@ -1,0 +1,75 @@
+31,51d30
+< 
+<         welcome.activated.connect ((index) => {
+<             switch (index) {
+<                 case 0:
+<                     try {
+<                         AppInfo.launch_default_for_uri ("https://valadoc.org/granite/Granite.html", null);
+<                     } catch (Error e) {
+<                         warning (e.message);
+<                     }
+< 
+<                     break;
+<                 case 1:
+<                     try {
+<                         AppInfo.launch_default_for_uri ("https://github.com/elementary/granite", null);
+<                     } catch (Error e) {
+<                         warning (e.message);
+<                     }
+< 
+<                     break;
+<             }
+<         });
+59,79d37
+< 
+<         welcome.activated.connect ((index) => {
+<             switch (index) {
+<                 case 0:
+<                     try {
+<                         AppInfo.launch_default_for_uri ("https://valadoc.org/granite/Granite.html", null);
+<                     } catch (Error e) {
+<                         warning (e.message);
+<                     }
+< 
+<                     break;
+<                 case 1:
+<                     try {
+<                         AppInfo.launch_default_for_uri ("https://github.com/elementary/granite", null);
+<                     } catch (Error e) {
+<                         warning (e.message);
+<                     }
+< 
+<                     break;
+<             }
+<         });
+121,122c79,80
+<             var save_notes_to_file = new Gtk.Button.with_label ("Save notes to file");
+<             var save_notes_to_gschema = new Gtk.Button.with_label ("Save notes to gschema");
+---
+>             var save_notes_to_file = new Gtk.Button.with_label ("Save to file");
+>             var save_notes_to_gschema = new Gtk.Button.with_label ("Save to gschema");
+128a87,93
+>             var searchbar_second = new Gtk.Entry ();
+> 
+>             searchbar_second.placeholder_text = "Search on the google.";
+>             searchbar_second.activate.connect (() => {
+>                 browser.load_uri ("https://www.google.com/search?q=" + searchbar_second.text);
+>             });
+> 
+174,178c139
+<                 start_page_entry.text = browser.get_uri ();
+<             });
+< 
+<             set_google_default_button.clicked.connect (() => {
+<                 start_page_entry.set_text ("https://google.com");
+---
+>                 start_page_entry.text = browser.uri;
+195d155
+<             custom_title_grid.attach_next_to (reload, searchbar, Gtk.PositionType.RIGHT, 1, 1);
+196a157,158
+>             custom_title_grid.attach_next_to (searchbar_second, searchbar, Gtk.PositionType.RIGHT, 1, 1);
+>             custom_title_grid.attach_next_to (reload, searchbar_second, Gtk.PositionType.RIGHT, 1, 1);
+235c197
+<             searchbar.set_size_request (350, 10);
+---
+>             searchbar.set_size_request (300, 10);
