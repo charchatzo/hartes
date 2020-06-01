@@ -129,8 +129,7 @@ namespace Dive {
             if (file_history.query_exists ()) {
                 file_history.delete ();
             }
-            var dos_history = new DataOutputStream (file_history.create (FileCreateFlags.REPLACE_DESTINATION));
-                
+            var dos_history = new DataOutputStream (file_history.create (FileCreateFlags.REPLACE_DESTINATION));   
             browser.load_changed.connect (() => {
                 searchbar.set_text (browser.uri);
                 dos_history.put_string (browser.uri + "\n");
