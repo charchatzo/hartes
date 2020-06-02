@@ -175,6 +175,10 @@ namespace Dive {
                 start_page_entry.set_text ("https://duckduckgo.com/");
             });
 
+            set_google_default_button.clicked.connect (() => {
+                start_page_entry.set_text ("https://google.com/");
+            });
+
             start_page_entry.set_text (settings.get_string("default-page"));
 
             window.move (settings.get_int("pos-x"), settings.get_int("pos-y"));
