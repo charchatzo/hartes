@@ -26,10 +26,5 @@
       <summary>Start page</summary>
       <description>The deep dive start page</description>
     </key>
-    <key name="notes" type="s">
-	  <default>""</default>
-	  <summary>Saved notes</summary>
-	  <description>The deep dive saved notes</description>
-	</key>
   </schema>
 </schemalist>
